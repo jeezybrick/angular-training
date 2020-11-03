@@ -1,0 +1,124 @@
+[class*='svg-icon-'] {
+  background-color: var(--color-icon-default);
+  box-sizing: content-box;
+  display: inline-block;
+  height: var(--size-icon-default);
+  overflow: hidden;
+  width: var(--size-icon-default);
+
+  &.primary {
+    background-color: var(--color-icon-primary);
+  }
+
+  &.full-with {
+    height: 100% !important;
+    width: auto !important;
+  }
+}
+
+//.svg-icon {
+//  &-marker {
+//    background: url('/assets/icons/drawing-tool/marker.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-color {
+//    background: url('/assets/icons/drawing-tool/color.svg') no-repeat 50% 50%;
+//    box-sizing: border-box;
+//    height: 22rem;
+//    width: 22rem;
+//  }
+//
+//  &-eraser {
+//    background: url('/assets/icons/drawing-tool/eraser.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-cursor {
+//    background: url('/assets/icons/drawing-tool/cursor.svg') no-repeat 50% 50%;
+//    box-sizing: border-box;
+//    height: 16rem;
+//    margin-top: 2rem;
+//    width: 16rem;
+//  }
+//
+//  &-grid {
+//    background: url('/assets/icons/drawing-tool/grid.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-trash {
+//    background: url('/assets/icons/drawing-tool/trash.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-marker-width {
+//    background: url('/assets/icons/drawing-tool/marker-width.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-image {
+//    background: url('/assets/icons/drawing-tool/image.svg') no-repeat 50% 50%;
+//    height: 21rem;
+//    margin-top: -2rem;
+//    width: 24rem;
+//  }
+//
+//  &-text {
+//    background: url('/assets/icons/drawing-tool/text.svg') no-repeat 50% 50%;
+//    height: 10rem;
+//    width: 10rem;
+//  }
+//
+//  &-calendar {
+//    background: url('/assets/icons/common/calendar.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-google {
+//    background: url('/assets/icons/social/google.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-notification-info {
+//    background: url('/assets/icons/notifications/info.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-notification-warning {
+//    background: url('/assets/icons/notifications/error.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-notification-success {
+//    background: url('/assets/icons/notifications/success.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-notification-error {
+//    background: url('/assets/icons/notifications/error.svg') no-repeat 50% 50%;
+//  }
+//
+//  &-search {
+//    background-color: #C2C3C9;
+//    background-position: center;
+//    height: 16rem;
+//    mask: url('/assets/icons/common/search.svg') no-repeat 50% 50%;
+//    width: 16rem;
+//  }
+//
+//  &-morning {
+//    background: url('/assets/icons/common/morning.svg') no-repeat 50% 50%;
+//    height: 24rem;
+//    width: 21rem;
+//  }
+//
+//  &-afternoon {
+//    background: url('/assets/icons/common/afternoon.svg') no-repeat 50% 50%;
+//    height: 24rem;
+//    margin-left: -12px;
+//    width: 21rem;
+//  }
+//
+//  &-evening {
+//    background: url('/assets/icons/common/evening.svg') no-repeat 50% 50%;
+//    height: 24rem;
+//    width: 21rem;
+//  }
+//
+//  &-big-plus {
+//    background: url('/assets/icons/common/big-plus.svg') no-repeat 50% 50%;
+//    height: 33rem;
+//    width: 33rem;
+//  }
+//}

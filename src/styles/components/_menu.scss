@@ -1,0 +1,44 @@
+@import 'abstracts/placeholders';
+
+.menu.tp-menu {
+  border-radius: var(--border-radius-menu);
+  box-shadow: var(--shadow-menu);
+  overflow: visible;
+  padding: 0;
+  position: relative;
+
+  &:not(.hide-arrow) {
+    &::before {
+      @extend %top-arrow;
+    }
+  }
+
+  &.side-header-menu {
+    left: 11rem;
+    top: 10rem;
+    width: 180rem;
+
+    &:not(.hide-arrow) {
+      &::before {
+        right: -35rem;
+      }
+    }
+  }
+
+}
+
+.menu.tp-filter-menu {
+  @extend .tp-menu;
+  max-width: none;
+
+  &:not(.hide-arrow) {
+    &::before {
+      left: auto !important;
+      right: 40rem !important;
+    }
+  }
+
+  .mat-menu-content:not(:empty) {
+    padding: 0;
+  }
+}

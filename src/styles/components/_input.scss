@@ -1,0 +1,129 @@
+@import 'abstracts/mixins';
+
+.input.tp-input.mat-form-field-appearance-outline {
+  input {
+    @include placeholder {
+      color: var(--color-placeholder-input-default);
+    }
+  }
+
+  &.mat-focused {
+    .mat-form-field-outline-start, .mat-form-field-outline-end {
+      border-color: var(--border-color-input-focused);
+    }
+  }
+
+  &.mat-form-field-disabled {
+    input {
+      @include placeholder {
+        color: var(--color-placeholder-input-disabled);
+      }
+    }
+
+    .mat-form-field-outline-start, .mat-form-field-outline-end {
+      border-color: var(--border-color-input);
+    }
+  }
+
+  &.mat-form-field-invalid {
+    .mat-form-field-outline-start, .mat-form-field-outline-end {
+      border-color: var(--border-color-input-error);
+    }
+  }
+
+  .mat-form-field-outline-start {
+    border-radius: var(--border-radius-input) 0 0 var(--border-radius-input);
+  }
+
+  .mat-form-field-outline-end {
+    border-radius: 0 var(--border-radius-input) var(--border-radius-input) 0;
+  }
+
+  .mat-form-field-outline-start, .mat-form-field-outline-end {
+    border-color: var(--border-color-input);
+    border-width: var(--border-width-input);
+    min-width: var(--border-radius-input);
+  }
+
+  .mat-form-field-outline {
+    background-color: var(--background-color-input);
+    border-radius: var(--border-radius-input);
+  }
+
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    color: var(--color-icon-input-default);
+
+    [class*='svg-icon-'] {
+      // #656565
+      filter: invert(41%) sepia(0%) saturate(50%) hue-rotate(142deg) brightness(91%) contrast(82%);
+    }
+  }
+
+  .mat-form-field-prefix .text-prefix,
+  .mat-form-field-suffix .text-suffix {
+    position: relative;
+    top: -0.25em;
+  }
+
+  .mat-form-field-flex > .mat-form-field-infix {
+    padding: 0.2em 0 0.564em;
+  }
+
+  .mat-error {
+    font-size: var(--font-size-error-text);
+  }
+
+  &.tp-select {
+    .mat-select-placeholder {
+      color: var(--color-placeholder-input-default);
+    }
+
+    .mat-select-arrow-wrapper {
+      transform: translateY(0);
+
+      .mat-select-arrow {
+        color: var(--color-icon-input-default);
+      }
+    }
+
+    &.mat-form-field-disabled {
+      .mat-form-field-outline {
+        background-color: var(--background-color-select-disabled);
+      }
+
+      .mat-form-field-outline-start, .mat-form-field-outline-end {
+        border-color: var(----border-color-input);
+      }
+
+      .mat-select-placeholder,
+      .mat-select-arrow {
+        color: var(--color-placeholder-input-disabled);
+      }
+    }
+
+  }
+
+  .register-phone-input .ngx-mat-tel-input-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+
+    .country-selector {
+      height: 15rem;
+      padding-right: 17rem;
+      position: relative;
+      top: -2rem;
+      width: auto;
+    }
+
+    .country-selector-flag {
+      filter: none;
+    }
+
+    .mat-input-element {
+      padding-left: 0;
+    }
+  }
+
+}

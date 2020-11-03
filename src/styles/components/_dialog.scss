@@ -1,0 +1,7 @@
+.dialog.tp-dialog {
+  .mat-dialog-container {
+    border-radius: var(--border-radius-dialog);
+    box-shadow: var(--shadow-dialog);
+    padding: 0;
+  }
+}

@@ -1,0 +1,123 @@
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+@import 'abstracts/variables';
+
+$arrow-color: #FFFFFF;
+$panel-max-height: 256rem;
+$panel-background: $white;
+$panel-shadow: 2rem 2rem 20rem rgba(0, 0, 0, 0.12);
+
+.chips-autocomplete-input.tp-chips-autocomplete-input {
+  .icon-plus {
+    @include icon-size(12rem);
+    margin-right: 4rem;
+
+    &::before {
+      color: var(--color-icon-input-default);
+    }
+  }
+
+  .placeholder-wrap {
+    margin-bottom: 15rem;
+
+    .placeholder-value {
+      color: var(--color-placeholder-input-default);
+    }
+
+    .icon-plus {
+      margin-right: 0;
+    }
+
+  }
+
+  .chip {
+    background: #FFFFFF;
+    border: 1rem solid var(--border-color-input);
+    border-radius: 17rem;
+    overflow: hidden;
+    padding: 0;
+
+    .chip-name-wrap {
+      padding: 0 12rem;
+    }
+
+    .chip-icon-wrap {
+      padding: 0 12rem 0 10rem;
+    }
+
+    .divider {
+      border-right-color: var(--border-color-input);
+    }
+  }
+
+  .icon-next::before {
+    font-size: 10rem;
+    transform: rotate(90deg);
+  }
+
+  .autocomplete-origin {
+    position: relative;
+    top: 0.5em;
+  }
+
+}
+
+.chips-autocomplete.tp-chips-autocomplete {
+  .autocomplete-title {
+    color: var(--color-text-heading);
+    font-size: var(--font-size-h3);
+    font-weight: bold;
+  }
+
+  &.mat-autocomplete-panel.mat-autocomplete-visible {
+    background: transparent;
+    box-shadow: $panel-shadow;
+    max-height: none;
+    overflow: visible;
+
+    .panel-wrap {
+      background: $panel-background;
+      max-height: $panel-max-height;
+      overflow: auto;
+    }
+
+    &.show-arrow::before {
+      @extend %top-arrow;
+    }
+
+  }
+
+  .autocomplete-option .checkbox-wrap {
+    width: 100%;
+
+    .mat-checkbox-layout,
+    .mat-checkbox-label {
+      max-width: 100%;
+      min-width: 0;
+    }
+  }
+
+  &.tp-subjects-autocomplete {
+    $autocomplete-option-padding: 16rem;
+
+    .autocomplete-option {
+      padding: 0;
+
+      .checkbox-wrap {
+        max-width: calc(100% - #{$autocomplete-option-padding});
+        padding-left: $autocomplete-option-padding;
+
+        .mat-checkbox-layout,
+        .mat-checkbox-label {
+          max-width: 100%;
+          min-width: 0;
+        }
+      }
+
+      .select-item-wrap {
+        padding-right: $autocomplete-option-padding;
+      }
+
+    }
+  }
+}

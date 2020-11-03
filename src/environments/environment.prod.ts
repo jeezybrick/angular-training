@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  name: 'production',
+  apiUrl: 'https://www.youtube.com',
 };

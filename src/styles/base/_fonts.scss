@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+$font-path: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap';
+$font-family: var(--font-family);
+
+// Base font
+@font-face {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  src: url($font-path);
+}
+
+// Icons
+//@font-face {
+//  font-family: 'Glyphter';
+//  font-style: normal;
+//  font-weight: normal;
+//  src: url('~assets/fonts/Glyphter.eot');
+//  src: url('~assets/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+//    url('~assets/fonts/Glyphter.woff') format('woff'),
+//    url('~assets/fonts/Glyphter.ttf') format('truetype'),
+//    url('~assets/fonts/Glyphter.svg#Glyphter') format('svg');
+//}

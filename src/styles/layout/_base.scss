@@ -1,0 +1,26 @@
+$decreased-container-max-width: 810rem;
+
+.layout-container {
+  margin: 0 auto;
+  max-width: var(--max-width-container);
+  min-height: 100vh;
+  min-width: auto !important;
+}
+
+.base-layout-content {
+  &.reduced-container,
+  .reduced-container {
+    box-sizing: border-box;
+    max-width: $decreased-container-max-width;
+    min-width: auto !important;
+
+    &.centered {
+      margin: 0 auto;
+    }
+  }
+
+  .content-body {
+    padding: 10rem var(--padding-content-side);
+    padding-bottom: 25rem;
+  }
+}

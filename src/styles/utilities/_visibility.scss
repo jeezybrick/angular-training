@@ -1,0 +1,23 @@
+//
+// Visibility utilities
+//
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible-important {
+  visibility: visible !important;
+}
+
+.invisible-important {
+  visibility: hidden !important;
+}
+
+.display-none {
+  display: none;
+}

@@ -1,0 +1,75 @@
+// Alignment
+.text-justify { text-align: justify !important; }
+.text-center { text-align: center !important; }
+.text-wrap { white-space: normal !important; }
+.text-nowrap { white-space: nowrap !important; }
+
+// Transformation
+.text-lowercase { text-transform: lowercase !important; }
+.text-uppercase { text-transform: uppercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Contextual colors
+.text-white { color: var(--white) !important; }
+
+// Misc
+.text-decoration-none { text-decoration: none !important; }
+
+.text-break {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important; // IE & < Edge 18
+}
+
+// Reset
+.text-reset { color: inherit !important; }
+
+// Typography
+.text-bold { font-weight: bold; }
+.text-regular { font-weight: normal; }
+.itext-talic { font-style: italic; }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break-word { word-wrap: break-word; }
+.text-no-wrap { white-space: nowrap; }
+.text-pre-line { white-space: pre-line; }
+
+// Text colors
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-minor {
+  color: var(--color-text-minor);
+}
+
+.text-error {
+  color: var(--color-error-default);
+}
+
+// Text sizes
+.text-heading-1,
+.text-heading-2,
+.text-heading-3 {
+  font-weight: 600;
+}
+
+.text-heading-1 {
+  font-size: var(--font-size-h1);
+}
+
+.text-heading-2 {
+  font-size: var(--font-size-h2);
+}
+
+.text-heading-3 {
+  font-size: var(--font-size-h3);
+}

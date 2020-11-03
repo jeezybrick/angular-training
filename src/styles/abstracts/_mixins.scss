@@ -1,0 +1,50 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin icon-size($sizeValue: 24rem) {
+  height: $sizeValue;
+  width: $sizeValue;
+
+  &::before {
+    font-size: $sizeValue;
+  }
+}
+
+@mixin only_safari {
+  @media not all and (min-resolution:0.001dpcm) { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+      @content;
+    }}
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--background-scrollbar-thumb);
+    border-radius: 50rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--background-scrollbar-track);
+    border-radius: 50rem;
+  }
+}
+

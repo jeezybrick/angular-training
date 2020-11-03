@@ -1,0 +1,62 @@
+%top-arrow {
+  $arrow-color: #FFFFFF;
+
+  border-bottom: 6rem solid $arrow-color;
+  border-left: 6rem solid transparent;
+  border-right: 6rem solid transparent;
+  bottom: 100%;
+  content: '';
+  height: 0;
+  left: 50%;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  width: 0;
+}
+
+%background-image-for-link {
+  $background-image-for-active-links: '/assets/images/active-link-background.png';
+
+  background: url($background-image-for-active-links) no-repeat 50% 65%;
+}
+
+%profile-validation-block {
+  $host-box-shadow: 0 2rem 10rem rgba(79, 77, 180, 0.1);
+  $host-width: 215rem;
+  $host-border-radius: 15rem;
+  $host-indent: 15rem;
+  $max-width-container: 1440px;
+  $content-padding: 19rem 24rem;
+
+  background: #FFFFFF;
+  border-radius: $host-border-radius;
+  bottom: 10em;
+  box-shadow: $host-box-shadow;
+  left: $host-indent;
+  overflow: hidden;
+  position: fixed;
+  width: $host-width;
+
+  .heading-block {
+    background-color: #faf9ff;
+  }
+
+  .content-with-padding {
+    padding: $content-padding;
+  }
+
+  @media (min-width: $max-width-container) {
+    left: calc(50% - #{var(--max-width-container)} / 2 + #{$host-indent});
+  }
+}
+
+%close-dialog-button {
+  position: absolute;
+  right: 10rem;
+  top: 10rem;
+
+  i::before {
+    font-size: 12rem;
+  }
+}

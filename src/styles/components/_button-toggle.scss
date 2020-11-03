@@ -1,0 +1,30 @@
+.button-toggle.tp-button-toggle {
+  border-color: var(--primary-default);
+  border-radius: var(--border-radius-button);
+  height: var(--height-button);
+
+  .mat-button-toggle-label-content {
+    color: var(--primary-default);
+  }
+
+  .mat-button-toggle {
+    height: var(--height-button);
+  }
+
+  .mat-button-toggle-checked {
+    background: var(--background-button-default);
+
+    .mat-button-toggle-label-content {
+      color: var(--color-button-default);
+    }
+  }
+
+  .mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: normal;
+  }
+
+  button {
+    height: var(--height-button);
+    min-width: 80rem;
+  }
+}

@@ -1,0 +1,132 @@
+@import 'functions';
+
+$purple-heart: hsl(260, 62%, 45%);
+$cerise: hsl(324, 75%, 55%);
+$saffron: hsl(47, 92%, 57%);
+$athens-gray: hsl(230, 19%, 94%); //#E3E4E8
+$titan-white: hsl(250, 100%, 98%); //#F5F3FF
+$moon-raker: hsl(250, 73%, 90%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$cod-gray: hsl(0, 0%, 11%);
+$pomegranate: hsl(4, 90%, 58%);
+$french-gray: hsl(231, 6%, 77%);
+$whisper: hsl(246, 28%, 93%);
+$dove-gray: hsl(0, 0%, 40%);
+$snuff: hsl(249, 33%, 89%);
+$grey: hsl(0, 0%, 51%); //#828282
+$magnolia: hsl(255, 100%, 99%); //#FCFBFF
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-size-base: 14px;
+  --font-size-h1: 35px;
+  --font-size-h2: 20px;
+  --font-size-h3: 15px;
+  --font-weight-icon: 1.2;
+  --font-size-error-text: 10px;
+
+  --background-default: #{$titan-white};
+
+  --primary-default: #{$purple-heart};
+  --primary-default-hover: #{get-hover-color($purple-heart)};
+  --primary-default-active: #{get-active-color($purple-heart)};
+  --secondary-default: #{$cerise};
+  --secondary-default-hover: #{get-hover-color($cerise)};
+  --secondary-default-active: #{get-active-color($cerise)};
+  --tertiary-default: #{$saffron};
+  --tertiary-default-hover: #{get-hover-color($saffron)};
+  --tertiary-default-active: #{get-active-color($saffron)};
+
+  --color-text-base: #{$cod-gray};
+  --color-text-primary: #{$purple-heart};
+  --color-text-secondary: #{$cerise};
+  --color-text-minor: #{$french-gray};
+  --color-text-heading: #{$black};
+  --color-error-default: #{$pomegranate};
+  --color-link-default: #{$black};
+  --color-button-default: #{$white};
+  --color-button-outline: #{$purple-heart};
+  --color-placeholder-input-default: #{$dove-gray};
+  --color-icon-input-default: #{$dove-gray};
+  --color-placeholder-input-disabled: #{$french-gray};
+  --color-icon-default: #{$black};
+  --color-icon-primary: #{$purple-heart};
+  --color-icon-secondary: #{$cerise};
+  --color-star-icon-default: #{$french-gray};
+  --color-star-icon-filled: #{$cerise};
+  --color-slider-thumb-label-text: #{$white};
+  --color-divider: #{$french-gray};
+
+  --background-button-default: #{$purple-heart};
+  --background-button-hover: #{get-hover-color($purple-heart)};
+  --background-button-outline-hover: #{$athens-gray};
+  --background-button-disabled: #{$french-gray};
+  --background-color-input: #{$titan-white};
+  --background-color-select-disabled: #{$magnolia};
+  --background-color-checkbox: #{$purple-heart};
+  --background-color-snackbar: #{$white};
+  --background-color-slide-toggle: #{$athens-gray};
+  --background-color-slide-toggle-thumb: #{$grey};
+  --background-color-slide-toggle-thumb-active: #{$purple-heart};
+  --background-color-card: #{$white};
+  --background-color-icon-button: rgba(226, 229, 242, 0.5);
+  --background-color-slider: #{$athens-gray};
+  --background-color-slider-track: #{$purple-heart};
+  --background-color-slider-thumb: #{$white};
+  --background-color-slider-thumb-label: #{$black};
+  --background-line-color-lesson-mode: #bbb;
+  --background-lesson-mode: #{$titan-white};
+  --background-secondary-lesson-mode: #{$athens-gray};
+  --background-lesson-join-content: linear-gradient(0deg, #F5F3FF, #F5F3FF), #EDEBF8;
+  --background-file-uploader: linear-gradient(0deg, #F5F3FF, #F5F3FF), #EDEBF8;
+  --background-file-uploader-panels: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  --background-scrollbar-thumb: #{$purple-heart};
+  --background-scrollbar-track: #{$moon-raker};
+
+  --border-radius-button: 8px;
+  --border-radius-input: 8px;
+  --border-radius-checkbox: 4px;
+  --border-radius-snackbar: 8px;
+  --border-radius-card: 16px;
+  --border-radius-chip: 18px;
+  --border-radius-menu: 16px;
+  --border-radius-dialog: 16px;
+  --border-radius-lesson-mode-tabs: 15px;
+  --border-radius-expansion-panel: 14px;
+  --border-color-input: #{$snuff};
+  --border-color-input-focused: #{$purple-heart};
+  --border-color-input-error: #{$pomegranate};
+  --border-color-snackbar: #{$snuff};
+  --border-color-checkbox: #{$purple-heart};
+  --border-color-button: #{$purple-heart};
+  --border-color-slider-thumb: #{$purple-heart};
+  --border-width-input: 1px;
+  --border-file-uploader: 1px dashed #{$purple-heart};
+
+  --shadow-card: 0 4rem 14px rgba(46, 43, 165, 0.1);
+  --shadow-snackbar: 0 4rem 14px rgba(39, 35, 47, 0.1);
+  --shadow-menu: 0 4rem 14px rgba(46, 43, 165, 0.1);
+  --shadow-dialog: 0 4rem 14px rgba(46, 43, 165, 0.1);
+  --shadow-expansion-panel: 0 4px 14px rgba(46, 43, 165, 0.1);
+
+  --width-sidenav: 180px;
+  --max-width-container: 1440px;
+  --padding-container: 0 15px;
+  --padding-button: 6rem 19px;
+  --padding-icon-button: 7px;
+  --padding-content-side: 15px;
+  --padding-expansion-panel-header-default: 0 26px;
+  --padding-expansion-panel-body-default: 22px 26px;
+
+  --height-header: 70px;
+  --height-button: 34px;
+  --height-expansion-panel-header: 62px;
+
+  --size-icon-default: 16px;
+
+  --animation-hover-panels: stripes 2s linear infinite;
+  --animation-file-uploader-panels: stripes 2s linear infinite;
+
+  --z-index-backdrop-loader: 99;
+}
