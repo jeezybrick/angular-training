@@ -1,4 +1,4 @@
-.my-fab, .my-flat-button, .my-mini-fab, .my-raised-button {
+.my-flat-button .my-raised-button {
   color: rgba(0,0,0,.87);
   background-color: #fff;
 }
@@ -8,11 +8,11 @@
   background: transparent;
 }
 
-.my-button, .my-fab, .my-flat-button, .my-icon-button, .my-mini-fab, .my-raised-button, .my-stroked-button {
-  font-family: Roboto,Helvetica Neue,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-}
+//.my-button, .my-flat-button, .my-raised-button, .my-stroked-button {
+//  font-family: Roboto,Helvetica Neue,sans-serif;
+//  font-size: 14px;
+//  font-weight: 500;
+//}
 
 .my-button, .my-icon-button, .my-stroked-button, .my-flat-button {
   box-sizing: border-box;
