@@ -5,6 +5,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { ButtonModule } from '@shared/components/button/button.module';
 import { LoginPageComponent } from './containers/login-page/login-page.component';
 import { InputModule } from '@shared/directives/input/input.module';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [LoginPageComponent],
@@ -12,7 +13,8 @@ import { InputModule } from '@shared/directives/input/input.module';
     CommonModule,
     AuthRoutingModule,
     ButtonModule,
-    InputModule
+    InputModule,
+    QuicklinkModule
   ]
 })
 export class AuthModule { }
