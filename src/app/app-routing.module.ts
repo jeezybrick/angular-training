@@ -24,6 +24,13 @@ const routes: Routes = [
       preload: false
     }
   },
+  {
+    path: 'demo',
+    loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule),
+    data: {
+      preload: false
+    }
+  },
   // { path: '**', redirectTo: '/404' },
   // { path: '404', component: NotFoundComponent }
 ];

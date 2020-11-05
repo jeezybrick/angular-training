@@ -1,1 +1,28 @@
-<p>auth-layout works!</p>
+<div class="auth-layout d-flex flex-column">
+
+  <my-navbar>
+
+    <div class="d-flex justify-content-between">
+      <div class="d-flex flex-wrap align-items-center">
+        <a my-button routerLink="/">Training</a>
+      </div>
+
+      <div>
+        <button my-button routerLink="/auth/login">Login</button>
+      </div>
+    </div>
+
+  </my-navbar>
+
+  <main class="auth-layout__main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <my-footer>
+    <div class="d-flex justify-content-end align-items-center full-height">
+      footer
+    </div>
+
+  </my-footer>
+
+</div>

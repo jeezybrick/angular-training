@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReplayControlValueChanges } from '@helpers/replay-control-value-changes';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'my-login-page',
@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   public formControl: FormControl = new FormControl();
+  public form: FormGroup;
 
   constructor() { }
 
