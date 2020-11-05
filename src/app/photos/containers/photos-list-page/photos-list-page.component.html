@@ -1,1 +1,7 @@
-<p>photos-list-page works!</p>
+<div *ngIf="(photos$ | async) as photos">
+
+  <p *ngFor="let photo of photos; trackBy: trackByFn">
+    <a my-button [routerLink]="[photo.id]">{{photo.title}}</a>
+  </p>
+
+</div>

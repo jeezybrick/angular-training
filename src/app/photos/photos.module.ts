@@ -7,10 +7,13 @@ import { QuicklinkModule } from 'ngx-quicklink';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from '../shared/components/button/button.module';
 import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.module';
-
+import { PhotoDetailPageComponent } from './containers/photo-detail-page/photo-detail-page.component';
+import { PhotoDetailApiAdapter } from './http-adapters/photo-detail-api.adapter';
+import { PhotosListApiAdapter } from './http-adapters/photos-list-api.adapter';
+import { PhotosService } from './services/photos.service';
 
 @NgModule({
-  declarations: [PhotosListPageComponent],
+  declarations: [PhotosListPageComponent, PhotoDetailPageComponent],
   imports: [
     CommonModule,
     PhotosRoutingModule,
@@ -18,6 +21,7 @@ import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.modul
     HttpClientModule,
     ButtonModule,
     MainLayoutModule,
-  ]
+  ],
+  providers: [PhotosService, PhotoDetailApiAdapter, PhotosListApiAdapter]
 })
 export class PhotosModule { }

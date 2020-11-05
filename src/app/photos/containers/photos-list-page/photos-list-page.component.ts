@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { PhotosService } from '@app/photos/services/photos.service';
+import { PhotoInterface } from '@app/photos/interfaces/photo.interface';
 
 @Component({
   selector: 'my-photos-list-page',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photos-list-page.component.scss']
 })
 export class PhotosListPageComponent implements OnInit {
+  public photos$: Observable<PhotoInterface[]>;
 
-  constructor() { }
+  constructor(private photosService: PhotosService) { }
 
   ngOnInit(): void {
+    this.photos$ = this.photosService.getList();
+  }
+
+  public trackByFn(index: number, item: PhotoInterface): number {
+    return item.id;
   }
 
 }
