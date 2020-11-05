@@ -1,0 +1,38 @@
+<div class="main-layout d-flex flex-column">
+
+  <my-navbar>
+
+    <div class="d-flex justify-content-between">
+      <div class="d-flex flex-wrap align-items-center">
+        <a my-button routerLink="/">Training</a>
+      </div>
+
+      <div>
+        <button my-button routerLink="/auth">Logout</button>
+      </div>
+    </div>
+
+  </my-navbar>
+
+  <div>
+    <my-sidenav class="main-layout__sidenav">
+      <div class="main-layout__links d-flex flex-column">
+        <a class="text-left" my-button routerLink="/dashboard">Dashboard</a>
+        <a class="text-left" my-button routerLink="/users">Users</a>
+        <a class="text-left" my-button routerLink="/auth">Auth</a>
+      </div>
+    </my-sidenav>
+
+    <main class="main-layout__main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+
+  <my-footer>
+    <div class="d-flex justify-content-end align-items-center full-height">
+      footer
+    </div>
+
+  </my-footer>
+
+</div>

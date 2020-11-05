@@ -1,0 +1,9 @@
+.my-sidenav {
+  position: fixed;
+  top: var(--height-navbar);
+  bottom: var(--height-footer);
+  left: 0;
+  padding: 0;
+  width: var(--width-sidenav);
+  box-shadow: 6px 0 6px rgba(0,0,0,.1);
+}

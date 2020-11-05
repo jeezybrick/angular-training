@@ -1,0 +1,13 @@
+.my-navbar {
+  position: fixed;
+  height: var(--height-navbar);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+
+  nav {
+    padding: 8px 16px;
+  }
+}

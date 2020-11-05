@@ -1,0 +1,12 @@
+.main-layout {
+
+  &__main-content {
+    min-height: 100vh;
+    padding: 80px 1rem;
+    margin-left: var(--width-sidenav);
+  }
+
+  &__links {
+    margin: 15px 0;
+  }
+}

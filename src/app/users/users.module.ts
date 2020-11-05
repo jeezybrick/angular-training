@@ -12,6 +12,7 @@ import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailApiAdapter } from './http-adapters/user-detail-api.adapter';
 import { ButtonModule } from '../shared/components/button/button.module';
+import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.module';
 
 @NgModule({
   declarations: [UsersListPageComponent, UserDetailPageComponent],
@@ -21,6 +22,7 @@ import { ButtonModule } from '../shared/components/button/button.module';
     QuicklinkModule,
     HttpClientModule,
     ButtonModule,
+    MainLayoutModule,
   ],
   providers: [UsersService, UsersListApiAdapter, UserDetailApiAdapter, AddressApiAdapter, CompanyApiAdapter]
 })

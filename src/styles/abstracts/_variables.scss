@@ -17,6 +17,21 @@ $snuff: hsl(249, 33%, 89%);
 $grey: hsl(0, 0%, 51%); //#828282
 $magnolia: hsl(255, 100%, 99%); //#FCFBFF
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows: auto, hidden !default;
+$positions: static, relative, absolute, fixed, sticky !default;
+
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+
 :root {
   --font-family: 'Roboto', sans-serif;
   --font-size-base: 14px;
@@ -110,7 +125,7 @@ $magnolia: hsl(255, 100%, 99%); //#FCFBFF
   --shadow-dialog: 0 4rem 14px rgba(46, 43, 165, 0.1);
   --shadow-expansion-panel: 0 4px 14px rgba(46, 43, 165, 0.1);
 
-  --width-sidenav: 180px;
+  --width-sidenav: 260px;
   --max-width-container: 1440px;
   --padding-container: 0 15px;
   --padding-button: 6rem 19px;
@@ -119,7 +134,8 @@ $magnolia: hsl(255, 100%, 99%); //#FCFBFF
   --padding-expansion-panel-header-default: 0 26px;
   --padding-expansion-panel-body-default: 22px 26px;
 
-  --height-header: 70px;
+  --height-navbar: 56px;
+  --height-footer: 56px;
   --height-button: 34px;
   --height-expansion-panel-header: 62px;
 
