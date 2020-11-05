@@ -4,17 +4,16 @@ import { UsersListApiAdapter } from '@app/users/http-adapters/users-list-api.ada
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { UserInterface } from '@app/users/interfaces/user.interface';
+import { ApiUserInterface } from '@app/users/interfaces/api-user.interface';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UsersService {
 
   constructor(@Inject(HttpClient) private http: HttpClient, private usersListApiAdapter: UsersListApiAdapter) { }
 
   public getList(): Observable<UserInterface[]> {
     return this.http
-      .get<any>('https://jsonplaceholder.typicode.com/users')
+      .get<ApiUserInterface[]>('https://jsonplaceholder.typicode.com/users')
       .pipe(
         map(data => this.usersListApiAdapter.adapt(data)),
       );

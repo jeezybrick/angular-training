@@ -11,7 +11,6 @@ export class UsersListApiAdapter implements AdapterInterface<UserInterface[]> {
   constructor(private addressApiAdapter: AddressApiAdapter, private companyApiAdapter: CompanyApiAdapter) {
   }
   public adapt(data: ApiUserInterface[]): UserInterface[] {
-    debugger;
     return data.map(item => {
       return {
         id: item.id,

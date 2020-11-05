@@ -17,4 +17,8 @@ export class UsersListPageComponent implements OnInit {
     this.users$ = this.usersService.getList();
   }
 
+  public trackByFn(index: number, item: UserInterface): number {
+    return item.id;
+  }
+
 }

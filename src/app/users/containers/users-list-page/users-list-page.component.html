@@ -1,5 +1,7 @@
 <div *ngIf="(users$ | async) as users">
 
-  {{users}}
+  <p *ngFor="let user of users; trackBy: trackByFn">
+    {{user.name}}
+  </p>
 
 </div>

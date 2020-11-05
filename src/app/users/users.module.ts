@@ -8,6 +8,8 @@ import { UsersListApiAdapter } from './http-adapters/users-list-api.adapter';
 import { AddressApiAdapter } from './http-adapters/address-api.adapter';
 import { CompanyApiAdapter } from './http-adapters/company-api.adapter';
 import { QuicklinkModule } from 'ngx-quicklink';
+import { UsersService } from './services/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [UsersListPageComponent, UserDetailPageComponent],
@@ -15,7 +17,8 @@ import { QuicklinkModule } from 'ngx-quicklink';
     CommonModule,
     UsersRoutingModule,
     QuicklinkModule,
+    HttpClientModule,
   ],
-  providers: [UsersListApiAdapter, AddressApiAdapter, CompanyApiAdapter]
+  providers: [UsersService, UsersListApiAdapter, AddressApiAdapter, CompanyApiAdapter]
 })
-export class UsersModule { }
+export class UsersModule {}

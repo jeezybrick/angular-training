@@ -20,6 +20,9 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+    data: {
+      preload: false
+    }
   },
   // { path: '**', redirectTo: '/404' },
   // { path: '404', component: NotFoundComponent }
