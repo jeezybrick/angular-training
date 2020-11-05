@@ -1,9 +1,14 @@
-<p>
-  <a my-button routerLink="/users">Back</a>
-</p>
+<div class="user-detail-page" *ngIf="(user$ | async) as user">
 
-<p>
-  {{user$ | async | json}}
-</p>
+  <h1>{{user.name}}</h1>
 
+  <p>
+    <a my-button routerLink="/users">Back</a>
+  </p>
+
+  <p>
+    {{user| json}}
+  </p>
+
+</div>
 

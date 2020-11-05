@@ -1,7 +1,20 @@
-<div *ngIf="(photos$ | async) as photos">
+<div class="photos-list-page">
 
-  <p *ngFor="let photo of photos; trackBy: trackByFn">
-    <a my-button [routerLink]="[photo.id]">{{photo.title}}</a>
-  </p>
+  <h1>Photos</h1>
+
+  <div class="photos-list-page__cards d-flex justify-content-start flex-row flex-wrap"
+       *ngIf="(photos$ | async) as photos">
+
+    <a [routerLink]="[photo.id]" *ngFor="let photo of photos; trackBy: trackByFn">
+      <my-card class="photos-list-page__card">
+        <div class="photos-list-page__card-image-wrap">
+          <img class="photos-list-page__card-image" [src]="photo.thumbnailUrl" alt="Photo">
+        </div>
+      </my-card>
+    </a>
+
+  </div>
 
 </div>
+
+

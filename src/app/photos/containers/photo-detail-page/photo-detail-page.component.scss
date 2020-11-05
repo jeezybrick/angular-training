@@ -1,0 +1,13 @@
+.photo-detail-page {
+
+  &__card-image-wrap {
+    min-width: 500px;
+    min-height: 500px;
+  }
+
+  &__card-image {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+}

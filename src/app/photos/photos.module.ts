@@ -11,6 +11,7 @@ import { PhotoDetailPageComponent } from './containers/photo-detail-page/photo-d
 import { PhotoDetailApiAdapter } from './http-adapters/photo-detail-api.adapter';
 import { PhotosListApiAdapter } from './http-adapters/photos-list-api.adapter';
 import { PhotosService } from './services/photos.service';
+import { CardModule } from '@shared/components/card/card.module';
 
 @NgModule({
   declarations: [PhotosListPageComponent, PhotoDetailPageComponent],
@@ -21,6 +22,7 @@ import { PhotosService } from './services/photos.service';
     HttpClientModule,
     ButtonModule,
     MainLayoutModule,
+    CardModule,
   ],
   providers: [PhotosService, PhotoDetailApiAdapter, PhotosListApiAdapter]
 })

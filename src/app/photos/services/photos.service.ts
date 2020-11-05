@@ -14,7 +14,7 @@ export class PhotosService {
 
   public getList(): Observable<PhotoInterface[]> {
     return this.http
-      .get<ApiPhotoInterface[]>('https://jsonplaceholder.typicode.com/photos')
+      .get<ApiPhotoInterface[]>('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100')
       .pipe(
         map(data => this.photosListApiAdapter.adapt(data)),
       );

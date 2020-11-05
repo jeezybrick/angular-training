@@ -1,9 +1,18 @@
-<p>
-  <a my-button routerLink="/photos">Back</a>
-</p>
+<div class="photo-detail-page" *ngIf="(photo$ | async) as photo">
 
-<p>
-  {{photo$ | async | json}}
-</p>
+  <h1>{{photo.title}}</h1>
 
+  <div>
+    <a my-button routerLink="/photos">Back</a>
+  </div>
+
+  <div>
+    <my-card>
+      <div class="photo-detail-page__card-image-wrap d-flex justify-content-center">
+        <img class="photo-detail-page__card-image" [src]="photo.url" alt="Photo">
+      </div>
+    </my-card>
+  </div>
+
+</div>
 
