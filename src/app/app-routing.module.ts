@@ -11,15 +11,12 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
   },
   {
-    path: 'dashboard',
-    // canActivate: [AuthGuard],
-    // canLoad: [AuthGuard],
-    // component: BaseLayoutComponent,
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
-  },
-  {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
+  },
+  {
+    path: 'photos',
+    loadChildren: () => import('./photos/photos.module').then(m => m.PhotosModule),
     data: {
       preload: false
     }
