@@ -1,0 +1,21 @@
+@import 'abstracts/mixins';
+
+.login-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__form {
+    width: 320px;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+  }
+
+  &__button {
+
+  }
+}

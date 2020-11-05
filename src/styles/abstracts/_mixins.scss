@@ -48,3 +48,14 @@
   }
 }
 
+@mixin centered($itemWidth, $itemHeight) {
+  $halfItemWidth: calc(-1 * (#{$itemWidth} / 2));
+  $halfItemHeight: calc(-1 * (#{$itemHeight} / 2));
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: $halfItemWidth;
+  margin-top: $halfItemHeight;
+}
+

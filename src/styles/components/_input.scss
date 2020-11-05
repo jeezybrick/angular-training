@@ -15,4 +15,8 @@
   &:disabled {
     border-color: rgba(gray, 30%);
   }
+
+  &.ng-touched.ng-invalid {
+    border-color: var(--color-error-default);
+  }
 }
