@@ -22,4 +22,10 @@ describe('LoginPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('ngOnInit', () => {
+    it('should ...', () => {
+
+    });
+  });
 });

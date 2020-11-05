@@ -57,7 +57,7 @@ export class AuthService {
     return this.storageService.getItem(StorageAuthKeysEnum.accessToken);
   }
 
-  public getAuthHeader(): string | null {
+  public getAuthHeader(): string {
     return `Bearer ${this.getToken()}`;
   }
 
