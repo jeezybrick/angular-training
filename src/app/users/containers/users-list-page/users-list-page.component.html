@@ -1,7 +1,7 @@
 <div *ngIf="(users$ | async) as users">
 
   <p *ngFor="let user of users; trackBy: trackByFn">
-    {{user.name}}
+    <a my-button [routerLink]="[user.id]">{{user.name}}</a>
   </p>
 
 </div>

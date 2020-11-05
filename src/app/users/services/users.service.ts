@@ -5,11 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { UserInterface } from '@app/users/interfaces/user.interface';
 import { ApiUserInterface } from '@app/users/interfaces/api-user.interface';
+import { UserDetailApiAdapter } from '@app/users/http-adapters/user-detail-api.adapter';
 
 @Injectable()
 export class UsersService {
 
-  constructor(@Inject(HttpClient) private http: HttpClient, private usersListApiAdapter: UsersListApiAdapter) { }
+  constructor(@Inject(HttpClient) private http: HttpClient, private usersListApiAdapter: UsersListApiAdapter, private userDetailApiAdapter: UserDetailApiAdapter) { }
 
   public getList(): Observable<UserInterface[]> {
     return this.http
@@ -19,7 +20,11 @@ export class UsersService {
       );
   }
 
-  public getDetail(): Observable<any> {
-    return of(true);
+  public getDetail(userId: number): Observable<UserInterface> {
+    return this.http
+      .get<ApiUserInterface>(`https://jsonplaceholder.typicode.com/users/${userId}`)
+      .pipe(
+        map(data => this.userDetailApiAdapter.adapt(data)),
+      );
   }
 }

@@ -10,6 +10,8 @@ import { CompanyApiAdapter } from './http-adapters/company-api.adapter';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailApiAdapter } from './http-adapters/user-detail-api.adapter';
+import { ButtonModule } from '../shared/components/button/button.module';
 
 @NgModule({
   declarations: [UsersListPageComponent, UserDetailPageComponent],
@@ -18,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     UsersRoutingModule,
     QuicklinkModule,
     HttpClientModule,
+    ButtonModule,
   ],
-  providers: [UsersService, UsersListApiAdapter, AddressApiAdapter, CompanyApiAdapter]
+  providers: [UsersService, UsersListApiAdapter, UserDetailApiAdapter, AddressApiAdapter, CompanyApiAdapter]
 })
 export class UsersModule {}
