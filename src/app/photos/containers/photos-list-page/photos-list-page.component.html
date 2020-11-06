@@ -5,13 +5,21 @@
   <div class="photos-list-page__cards d-flex justify-content-start flex-row flex-wrap"
        *ngIf="(photos$ | async) as photos">
 
-    <a [routerLink]="[photo.id]" *ngFor="let photo of photos; trackBy: trackByFn">
-      <my-card class="photos-list-page__card">
-        <div class="photos-list-page__card-image-wrap">
-          <img class="photos-list-page__card-image" [src]="photo.thumbnailUrl" alt="Photo">
-        </div>
+      <my-card class="photos-list-page__card" *ngFor="let photo of photos; trackBy: trackByFn">
+        <my-card-header>
+          <div my-card-avatar class="photos-list-page__header-image" [style.background-image]="'url(' + photo.thumbnailUrl + ')'"></div>
+          <my-card-title class="photos-list-page__title text-ellipsis">
+            <a [routerLink]="[photo.id]" >{{photo.title}}</a>
+          </my-card-title>
+          <my-card-subtitle>{{photo.id}}</my-card-subtitle>
+        </my-card-header>
+
+        <img my-card-image class="photos-list-page__card-image" [src]="photo.thumbnailUrl" alt="Photo">
+        <my-card-footer>
+          footer
+        </my-card-footer>
       </my-card>
-    </a>
+
 
   </div>
 
