@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   name: 'local',
-  apiUrl: 'https://www.youtube.com',
+  apiUrl: 'https://jsonplaceholder.typicode.com',
 };
 
 /*

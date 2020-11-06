@@ -11,7 +11,6 @@ import { QuicklinkModule } from 'ngx-quicklink';
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     CoreModule,
     QuicklinkModule

@@ -9,7 +9,6 @@ import { AddressApiAdapter } from './http-adapters/address-api.adapter';
 import { CompanyApiAdapter } from './http-adapters/company-api.adapter';
 import { QuicklinkModule } from 'ngx-quicklink';
 import { UsersService } from './services/users.service';
-import { HttpClientModule } from '@angular/common/http';
 import { UserDetailApiAdapter } from './http-adapters/user-detail-api.adapter';
 import { ButtonModule } from '../shared/components/button/button.module';
 import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.module';
@@ -20,7 +19,6 @@ import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.modul
     CommonModule,
     UsersRoutingModule,
     QuicklinkModule,
-    HttpClientModule,
     ButtonModule,
     MainLayoutModule,
   ],

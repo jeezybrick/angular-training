@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginPageComponent } from './login-page.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ describe('LoginPageComponent', () => {
   let fixture: ComponentFixture<LoginPageComponent>;
   // Alternative option for spy on router
   // let mockRouter = {
-  //   navigate: jasmine.createSpy('navigate')
+  //   navigate: jasmine.createSpy('navigate') // jest.spyOn('navigate)
   // };
   let router: Router;
 
@@ -20,10 +20,10 @@ describe('LoginPageComponent', () => {
         ReactiveFormsModule,
         RouterTestingModule,
       ],
-      declarations: [ LoginPageComponent ],
-     // providers: [{ provide: Router, useValue: mockRouter }]
+      declarations: [LoginPageComponent],
+      // providers: [{ provide: Router, useValue: mockRouter }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -36,10 +36,10 @@ describe('LoginPageComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe( 'Setup component', () => {
-    describe( 'ngOnInit', () => {
+  describe('Setup component', () => {
+    describe('ngOnInit', () => {
 
-      it( 'should call setForm method', () => {
+      it('should call setForm method', () => {
         expect(component.form).toBeUndefined();
         component.ngOnInit();
 
@@ -49,24 +49,24 @@ describe('LoginPageComponent', () => {
     });
   });
 
-  describe( 'nameControl', () => {
+  describe('nameControl', () => {
 
-    it( 'should return truthy value', () => {
+    it('should return truthy value', () => {
       component.ngOnInit();
       expect(component.nameControl).toBeTruthy();
     });
 
   });
 
-  describe( 'form', () => {
+  describe('form', () => {
 
-    describe( 'form instance', () => {
-      it( 'should be NOT valid by default', () => {
+    describe('form instance', () => {
+      it('should be NOT valid by default', () => {
         component.ngOnInit();
         expect(component.form.valid).toBeFalsy();
       });
 
-      it( 'should be valid if name field is valid', () => {
+      it('should be valid if name field is valid', () => {
         component.ngOnInit();
 
         const nameControl = component.nameControl;
@@ -77,9 +77,9 @@ describe('LoginPageComponent', () => {
 
     });
 
-    describe( 'name field', () => {
+    describe('name field', () => {
 
-      it( 'should have "required" error if empty', () => {
+      it('should have "required" error if empty', () => {
         component.ngOnInit();
         const nameControl = component.nameControl;
         nameControl.setValue('');
@@ -87,7 +87,7 @@ describe('LoginPageComponent', () => {
         expect(nameControl.hasError('required')).toBeTruthy();
       });
 
-      it( 'should have "maxlength" error if more than 6 chars', () => {
+      it('should have "maxlength" error if more than 6 chars', () => {
         component.ngOnInit();
         const nameControl = component.nameControl;
         nameControl.setValue('1234567');
@@ -95,7 +95,7 @@ describe('LoginPageComponent', () => {
         expect(nameControl.hasError('maxlength')).toBeTruthy();
       });
 
-      it( 'should NOT have errors if less than 6 chars and more than 1', () => {
+      it('should NOT have errors if less than 6 chars and more than 1', () => {
         component.ngOnInit();
         const nameControl = component.nameControl;
         nameControl.setValue('1234');
@@ -107,8 +107,8 @@ describe('LoginPageComponent', () => {
 
   });
 
-  describe( 'onSubmit', () => {
-    it( 'should NOT navigate to users page if form is invalid', () => {
+  describe('onSubmit', () => {
+    it('should NOT navigate to users page if form is invalid', () => {
       component.ngOnInit();
       component.onSubmit();
 
@@ -129,7 +129,5 @@ describe('LoginPageComponent', () => {
       // expect(mockRouter.navigate).toHaveBeenCalledWith(['/users']);
     });
   });
-
-
 
 });

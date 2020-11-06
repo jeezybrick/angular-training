@@ -18,9 +18,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.setForm();
 
-    this.subs.push(new ReplayControlValueChanges(this.nameControl).subscribe(value => {
-      console.log(value);
-    }));
+    this.subs.push(new ReplayControlValueChanges(this.nameControl).subscribe(value => {}));
   }
 
   public ngOnDestroy(): void {

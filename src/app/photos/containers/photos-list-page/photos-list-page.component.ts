@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PhotosService } from '@app/photos/services/photos.service';
+import { PhotosService } from '../../services/photos.service';
 import { PhotoInterface } from '@app/photos/interfaces/photo.interface';
 
 @Component({

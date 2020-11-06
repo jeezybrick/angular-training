@@ -3,6 +3,7 @@ module.exports = {
     '@core/(.*)': '<rootDir>/src/app/core/$1',
     '@helpers/(.*)': '<rootDir>/src/app/helpers/$1',
     '@shared/(.*)': '<rootDir>/src/app/shared/$1',
+    '@app/(.*)': '<rootDir>/src/app/$1',
   },
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],

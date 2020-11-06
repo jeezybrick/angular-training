@@ -10,11 +10,13 @@ import { UserDetailApiAdapter } from '@app/users/http-adapters/user-detail-api.a
 @Injectable()
 export class UsersService {
 
-  constructor(@Inject(HttpClient) private http: HttpClient, private usersListApiAdapter: UsersListApiAdapter, private userDetailApiAdapter: UserDetailApiAdapter) { }
+  constructor(@Inject(HttpClient) private http: HttpClient,
+              private usersListApiAdapter: UsersListApiAdapter,
+              private userDetailApiAdapter: UserDetailApiAdapter) { }
 
   public getList(): Observable<UserInterface[]> {
     return this.http
-      .get<ApiUserInterface[]>('https://jsonplaceholder.typicode.com/users')
+      .get<ApiUserInterface[]>('/users')
       .pipe(
         map(data => this.usersListApiAdapter.adapt(data)),
       );
@@ -22,7 +24,7 @@ export class UsersService {
 
   public getDetail(userId: number): Observable<UserInterface> {
     return this.http
-      .get<ApiUserInterface>(`https://jsonplaceholder.typicode.com/users/${userId}`)
+      .get<ApiUserInterface>(`/users/${userId}`)
       .pipe(
         map(data => this.userDetailApiAdapter.adapt(data)),
       );
