@@ -38,6 +38,18 @@
     "no-var-requires": false,
     "object-literal-key-quotes": [true, "as-needed"],
     "quotemark": [true, "single"],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": {
+          "objects": "never",
+          "arrays": "never",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        }
+      }
+    ],
     "semicolon": {
       "options": ["always"]
     },
