@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { UserInterface } from '@app/users/interfaces/user.interface';
 import { RouterTestingModule } from '@angular/router/testing';
 
-const mockUser = {id: 123} as UserInterface;
+const mockUser = { id: 123 } as UserInterface;
 class MockUsersService {
   getList(): Observable<UserInterface[]> {
     return of([mockUser]);
@@ -20,9 +20,8 @@ describe('UsersListPageComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [UsersListPageComponent],
-      providers: [{ provide: UsersService, useClass: MockUsersService }]
-    })
-      .compileComponents();
+      providers: [{ provide: UsersService, useClass: MockUsersService }],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -35,13 +34,11 @@ describe('UsersListPageComponent', () => {
   });
 
   describe('Setup component', () => {
-
     describe('ngOnInit', () => {
       it('should assign to users$ UsersService.getList() observable', () => {
         component.ngOnInit();
         expect(component.users$).toBeTruthy();
       });
-
     });
 
     describe('trackByFn', () => {
@@ -50,7 +47,5 @@ describe('UsersListPageComponent', () => {
         expect(component.trackByFn(1, mockUser)).toBe(mockUser.id);
       });
     });
-
   });
-
 });

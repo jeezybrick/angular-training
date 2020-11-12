@@ -5,9 +5,7 @@ import { LOCAL_STORAGE } from '@ng-web-apis/common';
   providedIn: 'root',
 })
 export class StorageService {
-
-  constructor(@Inject(LOCAL_STORAGE) readonly localStorage: Storage) {
-  }
+  constructor(@Inject(LOCAL_STORAGE) readonly localStorage: Storage) {}
   public setItem(key: string, value: string): StorageService {
     this.localStorage.setItem(key, value);
     return this;

@@ -4,9 +4,7 @@ import { InputDirective } from './input.directive';
 
 @NgModule({
   declarations: [InputDirective],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [InputDirective],
 })
-export class InputModule { }
+export class InputModule {}

@@ -9,14 +9,7 @@ import { ButtonModule } from '../../components/button/button.module';
 
 @NgModule({
   declarations: [MainLayoutComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SidenavModule,
-    NavbarModule,
-    FooterModule,
-    ButtonModule,
-  ],
+  imports: [CommonModule, RouterModule, SidenavModule, NavbarModule, FooterModule, ButtonModule],
   exports: [MainLayoutComponent],
 })
-export class MainLayoutModule { }
+export class MainLayoutModule {}

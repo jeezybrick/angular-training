@@ -11,17 +11,12 @@ import { ApiResponseInterface } from '../interfaces/api/api-response.interface';
   providedIn: 'root',
 })
 export class SettingsService {
-  constructor(
-    @Inject(HttpClient) private http: HttpClient,
-    private availabilityApiAdapter: AvailabilityApiAdapter,
-  ) {
-  }
+  constructor(@Inject(HttpClient) private http: HttpClient, private availabilityApiAdapter: AvailabilityApiAdapter) {}
 
   public getAvailability(): Observable<AvailabilityInterface[]> {
     return this.http.get<ApiResponseInterface<ApiAvailabilityInterface[]>>('/api/v1/user/lesson-availability').pipe(
-      map(response => response.data),
-      map(data => this.availabilityApiAdapter.adapt(data)),
+      map((response) => response.data),
+      map((data) => this.availabilityApiAdapter.adapt(data)),
     );
   }
-
 }

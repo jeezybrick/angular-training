@@ -4,17 +4,7 @@ import { getSupportedInputTypes, Platform } from '@angular/cdk/platform';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 // Invalid input type. Using one of these will throw an MatInputUnsupportedTypeError.
-const MY_INPUT_INVALID_TYPES = [
-  'button',
-  'checkbox',
-  'file',
-  'hidden',
-  'image',
-  'radio',
-  'range',
-  'reset',
-  'submit'
-];
+const MY_INPUT_INVALID_TYPES = ['button', 'checkbox', 'file', 'hidden', 'image', 'radio', 'range', 'reset', 'submit'];
 
 let nextUniqueId = 0;
 
@@ -22,14 +12,14 @@ let nextUniqueId = 0;
 /** @docs-private */
 class MatInputBase {
   // tslint:disable-next-line:variable-name
-  constructor(public _parentForm: NgForm,
-              // tslint:disable-next-line:variable-name
-              public _parentFormGroup: FormGroupDirective,
-              /** @docs-private */
-              public ngControl: NgControl) {
-  }
+  constructor(
+    public _parentForm: NgForm,
+    // tslint:disable-next-line:variable-name
+    public _parentFormGroup: FormGroupDirective,
+    /** @docs-private */
+    public ngControl: NgControl,
+  ) {}
 }
-
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -44,7 +34,7 @@ export class InputDirective extends MatInputBase implements DoCheck {
 
   @HostBinding('attr.readonly')
   public get attrReadonly(): boolean | null {
-    return this.readonly && !this._isNativeSelect || null;
+    return (this.readonly && !this._isNativeSelect) || null;
   }
 
   @HostBinding('attr.aria-required')
@@ -52,8 +42,8 @@ export class InputDirective extends MatInputBase implements DoCheck {
     return this.readonly.toString();
   }
 
-
-  @HostBinding('[disabled]') @Input()
+  @HostBinding('[disabled]')
+  @Input()
   get disabled(): boolean {
     return this._disabled;
   }
@@ -62,7 +52,8 @@ export class InputDirective extends MatInputBase implements DoCheck {
     this._disabled = coerceBooleanProperty(value);
   }
 
-  @HostBinding('attr.id') @Input()
+  @HostBinding('attr.id')
+  @Input()
   get id(): string {
     return this._id;
   }
@@ -71,7 +62,8 @@ export class InputDirective extends MatInputBase implements DoCheck {
     this._id = value || this._uid;
   }
 
-  @HostBinding('[required]') @Input()
+  @HostBinding('[required]')
+  @Input()
   get required(): boolean {
     return this._required;
   }
@@ -117,7 +109,6 @@ export class InputDirective extends MatInputBase implements DoCheck {
   set readonly(value: boolean) {
     this._readonly = coerceBooleanProperty(value);
   }
-
 
   constructor(
     // tslint:disable-next-line:variable-name
@@ -193,20 +184,16 @@ export class InputDirective extends MatInputBase implements DoCheck {
   protected _required = false;
   protected _type = 'text';
 
+  // tslint:disable-next-line:no-input-rename
   @Input('aria-describedby') userAriaDescribedBy: string;
   protected _value: string;
   // tslint:disable-next-line:variable-name
   private _readonly = false;
 
   // tslint:disable-next-line:variable-name
-  protected _neverEmptyInputTypes = [
-    'date',
-    'datetime',
-    'datetime-local',
-    'month',
-    'time',
-    'week'
-  ].filter(t => getSupportedInputTypes().has(t));
+  protected _neverEmptyInputTypes = ['date', 'datetime', 'datetime-local', 'month', 'time', 'week'].filter((t) =>
+    getSupportedInputTypes().has(t),
+  );
 
   public ngDoCheck(): void {
     // We need to dirty-check and set the placeholder attribute ourselves, because whether it's
@@ -221,8 +208,7 @@ export class InputDirective extends MatInputBase implements DoCheck {
 
   @HostListener('input')
   // tslint:disable-next-line:typedef
-  _onInput() {
-  }
+  _onInput() {}
 
   // tslint:disable-next-line:typedef
   private _dirtyCheckPlaceholder() {
@@ -230,8 +216,7 @@ export class InputDirective extends MatInputBase implements DoCheck {
     if (placeholder !== this._previousPlaceholder) {
       const element = this._elementRef.nativeElement;
       this._previousPlaceholder = placeholder;
-      placeholder ?
-        element.setAttribute('placeholder', placeholder) : element.removeAttribute('placeholder');
+      placeholder ? element.setAttribute('placeholder', placeholder) : element.removeAttribute('placeholder');
     }
   }
 
@@ -256,5 +241,4 @@ export class InputDirective extends MatInputBase implements DoCheck {
     const validity = (this._elementRef.nativeElement as HTMLInputElement).validity;
     return validity && validity.badInput;
   }
-
 }

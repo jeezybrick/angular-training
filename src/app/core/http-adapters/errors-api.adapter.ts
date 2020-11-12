@@ -4,7 +4,7 @@ import { ErrorModel } from '../models/error.model';
 import { ApiErrorResponseInterface } from '../interfaces/api/api-error-response.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ErrorsApiAdapter implements AdapterInterface<ErrorModel> {
   public adapt(data: ApiErrorResponseInterface): ErrorModel {

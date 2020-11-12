@@ -9,24 +9,17 @@ import { UserDetailApiAdapter } from '@app/users/http-adapters/user-detail-api.a
 
 @Injectable()
 export class UsersService {
-
-  constructor(@Inject(HttpClient) private http: HttpClient,
-              private usersListApiAdapter: UsersListApiAdapter,
-              private userDetailApiAdapter: UserDetailApiAdapter) { }
+  constructor(
+    @Inject(HttpClient) private http: HttpClient,
+    private usersListApiAdapter: UsersListApiAdapter,
+    private userDetailApiAdapter: UserDetailApiAdapter,
+  ) {}
 
   public getList(): Observable<UserInterface[]> {
-    return this.http
-      .get<ApiUserInterface[]>('/users')
-      .pipe(
-        map(data => this.usersListApiAdapter.adapt(data)),
-      );
+    return this.http.get<ApiUserInterface[]>('/users').pipe(map((data) => this.usersListApiAdapter.adapt(data)));
   }
 
   public getDetail(userId: number): Observable<UserInterface> {
-    return this.http
-      .get<ApiUserInterface>(`/users/${userId}`)
-      .pipe(
-        map(data => this.userDetailApiAdapter.adapt(data)),
-      );
+    return this.http.get<ApiUserInterface>(`/users/${userId}`).pipe(map((data) => this.userDetailApiAdapter.adapt(data)));
   }
 }

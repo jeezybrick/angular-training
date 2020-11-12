@@ -12,5 +12,4 @@ export class NavbarComponent {
   public get addBaseClass(): boolean {
     return true;
   }
-
 }

@@ -9,6 +9,6 @@ export class PhotosListApiAdapter implements AdapterInterface<PhotoInterface[]> 
   constructor(private photoDetailApiAdapter: PhotoDetailApiAdapter) {}
 
   public adapt(data: ApiPhotoInterface[]): PhotoInterface[] {
-    return data.map(item => this.photoDetailApiAdapter.adapt(item));
+    return data.map((item) => this.photoDetailApiAdapter.adapt(item));
   }
 }

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  CardComponent, MyCardActionsDirective, MyCardAvatarDirective,
+  CardComponent,
+  MyCardActionsDirective,
+  MyCardAvatarDirective,
   MyCardContentDirective,
-  MyCardFooterDirective, MyCardHeaderComponent,
+  MyCardFooterDirective,
+  MyCardHeaderComponent,
   MyCardImageDirective,
   MyCardSubtitleDirective,
-  MyCardTitleDirective, MyCardTitleGroupComponent
+  MyCardTitleDirective,
+  MyCardTitleGroupComponent,
 } from './card.component';
-
 
 const components = [
   CardComponent,
@@ -25,9 +28,7 @@ const components = [
 
 @NgModule({
   declarations: components,
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: components,
 })
-export class CardModule { }
+export class CardModule {}

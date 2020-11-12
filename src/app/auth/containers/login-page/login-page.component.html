@@ -1,16 +1,9 @@
 <div class="login-page d-flex justify-content-center align-items-center full-height">
-
-  <form class="login-page__form d-flex flex-column align-items-center" novalidate  [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input class="login-page__input" myInput formControlName="name" required>
-    <div *ngIf="nameControl.invalid && (nameControl.dirty || nameControl.touched)"
-         class="text-error">
-
-      <div *ngIf="nameControl.errors.required">
-        Name is required.
-      </div>
-      <div *ngIf="nameControl.errors.maxlength">
-        Name must be max 6 characters long.
-      </div>
+  <form class="login-page__form d-flex flex-column align-items-center" novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input class="login-page__input" myInput formControlName="name" required />
+    <div *ngIf="nameControl.invalid && (nameControl.dirty || nameControl.touched)" class="text-error">
+      <div *ngIf="nameControl.errors.required">Name is required.</div>
+      <div *ngIf="nameControl.errors.maxlength">Name must be max 6 characters long.</div>
     </div>
 
     <button class="login-page__button" my-button>Submit</button>

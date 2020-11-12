@@ -6,9 +6,7 @@ import { httpInterceptorProviders } from '@core/interceptors';
 // https://stackoverflow.com/questions/50860898/angular-6-services-providedin-root-vs-coremodule
 @NgModule({
   imports: [RouterModule],
-  providers: [
-    httpInterceptorProviders
-  ],
+  providers: [httpInterceptorProviders],
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() coreModule?: CoreModule) {

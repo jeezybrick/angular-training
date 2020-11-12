@@ -22,15 +22,37 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
 );
 
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky !default;
 
-$zindex-sticky:                     1020 !default;
-$zindex-fixed:                      1030 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
 
 :root {
   --font-family: 'Roboto', sans-serif;
@@ -93,8 +115,8 @@ $zindex-fixed:                      1030 !default;
   --background-line-color-lesson-mode: #bbb;
   --background-lesson-mode: #{$titan-white};
   --background-secondary-lesson-mode: #{$athens-gray};
-  --background-lesson-join-content: linear-gradient(0deg, #F5F3FF, #F5F3FF), #EDEBF8;
-  --background-file-uploader: linear-gradient(0deg, #F5F3FF, #F5F3FF), #EDEBF8;
+  --background-lesson-join-content: linear-gradient(0deg, #f5f3ff, #f5f3ff), #edebf8;
+  --background-file-uploader: linear-gradient(0deg, #f5f3ff, #f5f3ff), #edebf8;
   --background-file-uploader-panels: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   --background-scrollbar-thumb: #{$purple-heart};
   --background-scrollbar-track: #{$moon-raker};

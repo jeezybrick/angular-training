@@ -10,17 +10,14 @@ enum StorageAuthKeysEnum {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private currentUser$: BehaviorSubject<CurrentUserInterface | null> = new BehaviorSubject<CurrentUserInterface>(
     this.getCurrentUserFromStorage(),
   );
 
-  constructor(
-    @Inject(HttpClient) private http: HttpClient,
-    private storageService: StorageService,
-  ) {}
+  constructor(@Inject(HttpClient) private http: HttpClient, private storageService: StorageService) {}
 
   public get currentUserValue(): CurrentUserInterface {
     return this.currentUser$.value;

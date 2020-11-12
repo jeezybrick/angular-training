@@ -22,7 +22,6 @@ export interface PageInterface<T> {
   pagination: PaginationInterface;
 }
 
-
 export class ApiDataSource<T> extends DataSource<T> {
   private _iniState: DataSourceStateInterface = {
     page: 1,
@@ -33,9 +32,7 @@ export class ApiDataSource<T> extends DataSource<T> {
   };
 
   protected _loading$ = new BehaviorSubject<boolean>(true);
-  protected _status$: BehaviorSubject<DataSourceStatusEnum> = new BehaviorSubject<DataSourceStatusEnum>(
-    DataSourceStatusEnum.init,
-  );
+  protected _status$: BehaviorSubject<DataSourceStatusEnum> = new BehaviorSubject<DataSourceStatusEnum>(DataSourceStatusEnum.init);
   protected _state$ = new BehaviorSubject<DataSourceStateInterface>(this._iniState);
   protected _data$ = new BehaviorSubject<T[]>([]);
   protected _total$ = new BehaviorSubject<number>(0);

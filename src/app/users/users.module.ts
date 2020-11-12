@@ -15,13 +15,7 @@ import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.modul
 
 @NgModule({
   declarations: [UsersListPageComponent, UserDetailPageComponent],
-  imports: [
-    CommonModule,
-    UsersRoutingModule,
-    QuicklinkModule,
-    ButtonModule,
-    MainLayoutModule,
-  ],
-  providers: [UsersService, UsersListApiAdapter, UserDetailApiAdapter, AddressApiAdapter, CompanyApiAdapter]
+  imports: [CommonModule, UsersRoutingModule, QuicklinkModule, ButtonModule, MainLayoutModule],
+  providers: [UsersService, UsersListApiAdapter, UserDetailApiAdapter, AddressApiAdapter, CompanyApiAdapter],
 })
 export class UsersModule {}

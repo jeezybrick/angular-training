@@ -14,14 +14,7 @@ import { CardModule } from '@shared/components/card/card.module';
 
 @NgModule({
   declarations: [PhotosListPageComponent, PhotoDetailPageComponent],
-  imports: [
-    CommonModule,
-    PhotosRoutingModule,
-    QuicklinkModule,
-    ButtonModule,
-    MainLayoutModule,
-    CardModule,
-  ],
-  providers: [PhotosService, PhotoDetailApiAdapter, PhotosListApiAdapter]
+  imports: [CommonModule, PhotosRoutingModule, QuicklinkModule, ButtonModule, MainLayoutModule, CardModule],
+  providers: [PhotosService, PhotoDetailApiAdapter, PhotosListApiAdapter],
 })
-export class PhotosModule { }
+export class PhotosModule {}

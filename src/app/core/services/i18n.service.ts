@@ -5,7 +5,7 @@ export enum Lang {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class I18nService {
   public currentLanguage: Lang = Lang.en;

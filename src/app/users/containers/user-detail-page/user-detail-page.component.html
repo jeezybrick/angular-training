@@ -1,14 +1,11 @@
-<div class="user-detail-page" *ngIf="(user$ | async) as user">
-
-  <h1>{{user.name}}</h1>
+<div class="user-detail-page" *ngIf="user$ | async as user">
+  <h1>{{ user.name }}</h1>
 
   <p>
     <a my-button routerLink="/users">Back</a>
   </p>
 
   <p>
-    {{user| json}}
+    {{ user | json }}
   </p>
-
 </div>
-

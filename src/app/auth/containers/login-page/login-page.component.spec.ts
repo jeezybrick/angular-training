@@ -16,14 +16,10 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        RouterTestingModule,
-      ],
+      imports: [ReactiveFormsModule, RouterTestingModule],
       declarations: [LoginPageComponent],
       // providers: [{ provide: Router, useValue: mockRouter }]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,28 +34,23 @@ describe('LoginPageComponent', () => {
 
   describe('Setup component', () => {
     describe('ngOnInit', () => {
-
       it('should call setForm method', () => {
         expect(component.form).toBeUndefined();
         component.ngOnInit();
 
         expect(component.form).toBeTruthy();
       });
-
     });
   });
 
   describe('nameControl', () => {
-
     it('should return truthy value', () => {
       component.ngOnInit();
       expect(component.nameControl).toBeTruthy();
     });
-
   });
 
   describe('form', () => {
-
     describe('form instance', () => {
       it('should be NOT valid by default', () => {
         component.ngOnInit();
@@ -74,11 +65,9 @@ describe('LoginPageComponent', () => {
 
         expect(component.form.valid).toBeTruthy();
       });
-
     });
 
     describe('name field', () => {
-
       it('should have "required" error if empty', () => {
         component.ngOnInit();
         const nameControl = component.nameControl;
@@ -102,9 +91,7 @@ describe('LoginPageComponent', () => {
 
         expect(nameControl.valid).toBeTruthy();
       });
-
     });
-
   });
 
   describe('onSubmit', () => {
@@ -129,5 +116,4 @@ describe('LoginPageComponent', () => {
       // expect(mockRouter.navigate).toHaveBeenCalledWith(['/users']);
     });
   });
-
 });

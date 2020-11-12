@@ -7,15 +7,14 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'my-user-detail-page',
   templateUrl: './user-detail-page.component.html',
-  styleUrls: ['./user-detail-page.component.scss']
+  styleUrls: ['./user-detail-page.component.scss'],
 })
 export class UserDetailPageComponent implements OnInit {
   public user$: Observable<UserInterface>;
 
-  constructor(private usersService: UsersService, private activatedRoute: ActivatedRoute) { }
+  constructor(private usersService: UsersService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.user$ = this.usersService.getDetail(this.activatedRoute.snapshot.params.userId);
   }
-
 }

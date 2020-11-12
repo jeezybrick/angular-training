@@ -9,11 +9,7 @@ import { ErrorsApiAdapter } from '../http-adapters/errors-api.adapter';
 
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
-  constructor(
-    private router: Router,
-    private authService: AuthService,
-    private errorsAdapter: ErrorsApiAdapter,
-  ) {}
+  constructor(private router: Router, private authService: AuthService, private errorsAdapter: ErrorsApiAdapter) {}
 
   public intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(request).pipe(

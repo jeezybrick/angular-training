@@ -7,9 +7,7 @@ import { CompanyApiAdapter } from './company-api.adapter';
 
 @Injectable()
 export class UserDetailApiAdapter implements AdapterInterface<UserInterface> {
-
-  constructor(private addressApiAdapter: AddressApiAdapter, private companyApiAdapter: CompanyApiAdapter) {
-  }
+  constructor(private addressApiAdapter: AddressApiAdapter, private companyApiAdapter: CompanyApiAdapter) {}
   public adapt(data: ApiUserInterface): UserInterface {
     return {
       id: data.id,
@@ -19,7 +17,7 @@ export class UserDetailApiAdapter implements AdapterInterface<UserInterface> {
       address: this.addressApiAdapter.adapt(data.address),
       phone: data.phone,
       website: data.website,
-      company: this.companyApiAdapter.adapt(data.company)
+      company: this.companyApiAdapter.adapt(data.company),
     };
   }
 }

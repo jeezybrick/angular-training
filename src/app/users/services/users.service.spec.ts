@@ -9,10 +9,7 @@ describe('UsersService', () => {
   let service: UsersService;
   let injector: TestBed;
   let httpMock: HttpTestingController;
-  const mockUsers: UserInterface[] = [
-    { id: 1 },
-    { id: 2 },
-  ] as UserInterface[];
+  const mockUsers: UserInterface[] = [{ id: 1 }, { id: 2 }] as UserInterface[];
   const mockUser: UserInterface = mockUsers[0];
   const emsg = 'simulated network error';
   const mockError = new ErrorEvent('Network error', {
@@ -24,8 +21,8 @@ describe('UsersService', () => {
       imports: [HttpClientTestingModule],
       providers: [
         UsersService,
-        { provide: UsersListApiAdapter, useValue: {adapt: jest.fn().mockReturnValue(mockUsers)} },
-        { provide: UserDetailApiAdapter, useValue: {adapt: jest.fn().mockReturnValue(mockUser)} },
+        { provide: UsersListApiAdapter, useValue: { adapt: jest.fn().mockReturnValue(mockUsers) } },
+        { provide: UserDetailApiAdapter, useValue: { adapt: jest.fn().mockReturnValue(mockUser) } },
       ],
     });
     injector = getTestBed();
@@ -43,9 +40,8 @@ describe('UsersService', () => {
   });
 
   describe('#getList', () => {
-
-    it('should return an Observable<UserInterface[]>', done => {
-      service.getList().subscribe(users => {
+    it('should return an Observable<UserInterface[]>', (done) => {
+      service.getList().subscribe((users) => {
         expect(users.length).toBe(2);
         expect(users).toEqual(mockUsers);
         done();
@@ -56,9 +52,9 @@ describe('UsersService', () => {
       req.flush(mockUsers);
     });
 
-    it('should return an error', done => {
+    it('should return an error', (done) => {
       service.getList().subscribe({
-        error: error => {
+        error: (error) => {
           expect(error).toBeDefined();
           done();
         },
@@ -71,8 +67,8 @@ describe('UsersService', () => {
   });
 
   describe('#getDetail', () => {
-    it('should return an Observable<UserInterface>', done => {
-      service.getDetail(mockUser.id).subscribe(user => {
+    it('should return an Observable<UserInterface>', (done) => {
+      service.getDetail(mockUser.id).subscribe((user) => {
         expect(user).toEqual(mockUser);
         done();
       });
@@ -82,9 +78,9 @@ describe('UsersService', () => {
       req.flush(mockUser);
     });
 
-    it('should return an error', done => {
+    it('should return an error', (done) => {
       service.getDetail(mockUser.id).subscribe({
-        error: error => {
+        error: (error) => {
           expect(error).toBeDefined();
           done();
         },
@@ -95,5 +91,4 @@ describe('UsersService', () => {
       req.error(mockError);
     });
   });
-
 });

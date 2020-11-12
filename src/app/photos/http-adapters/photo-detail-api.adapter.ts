@@ -5,7 +5,6 @@ import { ApiPhotoInterface } from '../interfaces/api-photo.interface';
 
 @Injectable()
 export class PhotoDetailApiAdapter implements AdapterInterface<PhotoInterface> {
-
   public adapt(data: ApiPhotoInterface): PhotoInterface {
     return {
       id: data.id,

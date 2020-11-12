@@ -9,6 +9,6 @@ export class UsersListApiAdapter implements AdapterInterface<UserInterface[]> {
   constructor(private userDetailApiAdapter: UserDetailApiAdapter) {}
 
   public adapt(data: ApiUserInterface[]): UserInterface[] {
-    return data.map(item => this.userDetailApiAdapter.adapt(item));
+    return data.map((item) => this.userDetailApiAdapter.adapt(item));
   }
 }

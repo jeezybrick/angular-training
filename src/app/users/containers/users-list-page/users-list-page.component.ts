@@ -6,12 +6,12 @@ import { UserInterface } from '@app/users/interfaces/user.interface';
 @Component({
   selector: 'my-users-list-page',
   templateUrl: './users-list-page.component.html',
-  styleUrls: ['./users-list-page.component.scss']
+  styleUrls: ['./users-list-page.component.scss'],
 })
 export class UsersListPageComponent implements OnInit {
   public users$: Observable<UserInterface[]>;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService) {}
 
   ngOnInit(): void {
     this.users$ = this.usersService.getList();
@@ -20,5 +20,4 @@ export class UsersListPageComponent implements OnInit {
   public trackByFn(index: number, item: UserInterface): number {
     return item.id;
   }
-
 }

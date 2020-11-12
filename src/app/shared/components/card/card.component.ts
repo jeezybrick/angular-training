@@ -13,7 +13,6 @@ export class CardComponent {
   public get addBaseClass(): boolean {
     return true;
   }
-
 }
 
 @Component({
@@ -43,7 +42,7 @@ export class MyCardTitleGroupComponent {
 }
 
 @Directive({
-  selector: 'my-card-content, [my-card-content], [myCardContent]'
+  selector: 'my-card-content, [my-card-content], [myCardContent]',
 })
 export class MyCardContentDirective {
   @HostBinding('class.my-card-content')
@@ -53,7 +52,7 @@ export class MyCardContentDirective {
 }
 
 @Directive({
-  selector: 'my-card-title, [my-card-title], [myCardTitle]'
+  selector: 'my-card-title, [my-card-title], [myCardTitle]',
 })
 export class MyCardTitleDirective {
   @HostBinding('class.my-card-title')
@@ -63,7 +62,7 @@ export class MyCardTitleDirective {
 }
 
 @Directive({
-  selector: 'my-card-subtitle, [my-card-subtitle], [myCardSubtitle]'
+  selector: 'my-card-subtitle, [my-card-subtitle], [myCardSubtitle]',
 })
 export class MyCardSubtitleDirective {
   @HostBinding('class.my-card-subtitle')
@@ -90,7 +89,7 @@ export class MyCardActionsDirective {
 }
 
 @Directive({
-  selector: 'my-card-image, [my-card-image], [myCardImage]'
+  selector: 'my-card-image, [my-card-image], [myCardImage]',
 })
 export class MyCardImageDirective {
   @HostBinding('class.my-card-image')
@@ -100,7 +99,7 @@ export class MyCardImageDirective {
 }
 
 @Directive({
-  selector: 'my-card-footer, [my-card-footer], [myCardFooter]'
+  selector: 'my-card-footer, [my-card-footer], [myCardFooter]',
 })
 export class MyCardFooterDirective {
   @HostBinding('class.my-card-footer')
@@ -110,7 +109,7 @@ export class MyCardFooterDirective {
 }
 
 @Directive({
-  selector: 'my-card-avatar, [my-card-avatar], [myCardAvatar]'
+  selector: 'my-card-avatar, [my-card-avatar], [myCardAvatar]',
 })
 export class MyCardAvatarDirective {
   @HostBinding('class.my-card-avatar')

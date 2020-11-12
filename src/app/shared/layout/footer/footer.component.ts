@@ -8,7 +8,6 @@ import { ChangeDetectionStrategy, Component, HostBinding, ViewEncapsulation } fr
   encapsulation: ViewEncapsulation.None,
 })
 export class FooterComponent {
-
   @HostBinding('class.my-footer')
   public get addBaseClass(): boolean {
     return true;

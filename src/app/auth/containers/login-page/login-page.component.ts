@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'my-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss']
+  styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent implements OnInit, OnDestroy {
   public form: FormGroup;
@@ -18,11 +18,11 @@ export class LoginPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.setForm();
 
-    this.subs.push(new ReplayControlValueChanges(this.nameControl).subscribe(value => {}));
+    this.subs.push(new ReplayControlValueChanges(this.nameControl).subscribe((value) => {}));
   }
 
   public ngOnDestroy(): void {
-    this.subs.forEach(sub => {
+    this.subs.forEach((sub) => {
       sub.unsubscribe();
     });
   }
@@ -44,5 +44,4 @@ export class LoginPageComponent implements OnInit, OnDestroy {
       name: [null, [Validators.required, Validators.maxLength(6)]],
     });
   }
-
 }

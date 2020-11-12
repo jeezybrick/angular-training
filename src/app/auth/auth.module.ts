@@ -11,14 +11,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LoginPageComponent],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    AuthRoutingModule,
-    ButtonModule,
-    InputModule,
-    QuicklinkModule,
-    AuthLayoutModule
-  ]
+  imports: [CommonModule, ReactiveFormsModule, AuthRoutingModule, ButtonModule, InputModule, QuicklinkModule, AuthLayoutModule],
 })
-export class AuthModule { }
+export class AuthModule {}

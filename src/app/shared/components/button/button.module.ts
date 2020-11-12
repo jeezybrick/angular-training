@@ -4,9 +4,7 @@ import { AnchorComponent, ButtonComponent } from './button.component';
 
 @NgModule({
   declarations: [ButtonComponent, AnchorComponent],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [ButtonComponent, AnchorComponent],
 })
-export class ButtonModule { }
+export class ButtonModule {}

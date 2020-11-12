@@ -1,23 +1,11 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef, HostBinding, HostListener,
-  Input,
-  ViewEncapsulation
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostBinding, HostListener, Input, ViewEncapsulation } from '@angular/core';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 
-const BUTTON_HOST_ATTRIBUTES = [
-  'my-button',
-  'my-flat-button',
-  'my-raised-button',
-  'my-stroked-button',
-];
+const BUTTON_HOST_ATTRIBUTES = ['my-button', 'my-flat-button', 'my-raised-button', 'my-stroked-button'];
 
 class MatButtonBase {
   // tslint:disable-next-line:variable-name
-  constructor(public _elementRef: ElementRef) {
-  }
+  constructor(public _elementRef: ElementRef) {}
 }
 
 @Component({
@@ -64,7 +52,6 @@ export class ButtonComponent extends MatButtonBase {
     }
 
     elementRef.nativeElement.classList.add('my-button-base');
-
   }
 
   // tslint:disable-next-line:typedef
@@ -74,10 +61,8 @@ export class ButtonComponent extends MatButtonBase {
 
   // tslint:disable-next-line:typedef
   private _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
+    return attributes.some((attribute) => this._getHostElement().hasAttribute(attribute));
   }
-
-
 }
 
 @Component({
@@ -95,14 +80,13 @@ export class AnchorComponent extends ButtonComponent {
 
   @HostBinding('attr.tabindex')
   public get getTabIndex(): number {
-    return this.disabled ? -1 : (this.tabIndex || 0);
+    return this.disabled ? -1 : this.tabIndex || 0;
   }
 
   @HostBinding('attr.aria-disabled')
   public get attrAriaDisabled(): string {
     return this.disabled.toString();
   }
-
 
   @HostListener('click', ['$event'])
   public _haltDisabledEvents(event: Event): void {
@@ -112,9 +96,7 @@ export class AnchorComponent extends ButtonComponent {
     }
   }
 
-  constructor(
-    elementRef: ElementRef) {
+  constructor(elementRef: ElementRef) {
     super(elementRef);
   }
-
 }

@@ -7,14 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
-    children: [
-      { path: '', component: DemoComponent },
-    ],
+    children: [{ path: '', component: DemoComponent }],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DemoRoutingModule { }
+export class DemoRoutingModule {}

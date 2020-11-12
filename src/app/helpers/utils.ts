@@ -11,11 +11,7 @@ export function isAbsoluteUrl(url: string): boolean {
   return absolutePattern.test(url);
 }
 
-export function getProfileFullName(value: {
-  firstName: string;
-  lastName: string;
-  preferredName?: string | null;
-}): string {
+export function getProfileFullName(value: { firstName: string; lastName: string; preferredName?: string | null }): string {
   if (!value) {
     return '';
   }

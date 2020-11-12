@@ -5,7 +5,7 @@ import { UserInterface } from '@app/users/interfaces/user.interface';
 import { RouterTestingModule } from '@angular/router/testing';
 import { UserDetailPageComponent } from '@app/users/containers/user-detail-page/user-detail-page.component';
 
-const mockUser = {id: 123} as UserInterface;
+const mockUser = { id: 123 } as UserInterface;
 class MockUsersService {
   getDetail(userId: number): Observable<UserInterface> {
     return of(mockUser);
@@ -20,9 +20,8 @@ describe('UserDetailPageComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [UserDetailPageComponent],
-      providers: [{ provide: UsersService, useClass: MockUsersService }]
-    })
-      .compileComponents();
+      providers: [{ provide: UsersService, useClass: MockUsersService }],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -35,15 +34,11 @@ describe('UserDetailPageComponent', () => {
   });
 
   describe('Setup component', () => {
-
     describe('ngOnInit', () => {
       it('should assign to user$ UsersService.getDetail(id) observable', () => {
         component.ngOnInit();
         expect(component.user$).toBeTruthy();
       });
-
     });
-
   });
-
 });

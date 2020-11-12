@@ -8,8 +8,8 @@ import { AuthInterceptor } from './auth-interceptor';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 
 export const httpInterceptorProviders = [
-  {provide: ErrorHandler, useClass: GlobalErrorHandler},
-  {provide: API_URL, useValue: environment.apiUrl},
+  { provide: ErrorHandler, useClass: GlobalErrorHandler },
+  { provide: API_URL, useValue: environment.apiUrl },
   {
     provide: HTTP_INTERCEPTORS,
     useClass: ApiUrlInterceptor,

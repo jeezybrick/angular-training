@@ -8,13 +8,7 @@ import { ButtonModule } from '../../components/button/button.module';
 
 @NgModule({
   declarations: [AuthLayoutComponent],
-  imports: [
-    CommonModule,
-    RouterModule,
-    NavbarModule,
-    FooterModule,
-    ButtonModule,
-  ],
+  imports: [CommonModule, RouterModule, NavbarModule, FooterModule, ButtonModule],
   exports: [AuthLayoutComponent],
 })
-export class AuthLayoutModule { }
+export class AuthLayoutModule {}

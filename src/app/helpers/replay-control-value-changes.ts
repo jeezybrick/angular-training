@@ -4,7 +4,7 @@ import { startWith } from 'rxjs/operators';
 
 export class ReplayControlValueChanges<T> extends Observable<T> {
   constructor(control: AbstractControl | AbstractControlDirective) {
-    super(subscriber => {
+    super((subscriber) => {
       if (!control.valueChanges) {
         throw new Error('Control does not have valueChanges');
       }

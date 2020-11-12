@@ -1,7 +1,6 @@
 import { doSomething, getProfileFullName, isAbsoluteUrl } from '@helpers/utils';
 
 describe('Utils', () => {
-
   describe('isAbsoluteUrl', () => {
     const mockRelativeUrl = '/users';
     const mockAbsoluteUrl = 'https://www.youtube.com/users';
@@ -13,7 +12,6 @@ describe('Utils', () => {
     it('should return true if relative url', () => {
       expect(isAbsoluteUrl(mockAbsoluteUrl)).toBe(true);
     });
-
   });
 
   describe('getProfileFullName', () => {
@@ -45,17 +43,12 @@ describe('Utils', () => {
     it('should return concatenated firstName and lastName if preferred name empty string', () => {
       expect(getProfileFullName(mockValueWithEmptyPreferredName)).toBe(concatenatedFirstAndLastName);
     });
-
   });
 
   describe('doSomething', () => {
-
     it('should return same value', () => {
       const mockString = '123';
       expect(doSomething(mockString)).toBe(mockString);
     });
-
   });
-
-
 });

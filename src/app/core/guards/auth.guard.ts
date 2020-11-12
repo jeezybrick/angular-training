@@ -12,7 +12,7 @@ import {
 import { AuthService } from '../services/auth.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuard implements CanActivate, CanLoad {
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private authService: AuthService) {}
