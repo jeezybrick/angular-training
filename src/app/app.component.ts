@@ -6,8 +6,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  @HostListener('window:beforeunload', ['$event'])
-  beforeunloadHandler(event): boolean {
-    return false;
-  }
+  // @HostListener('window:beforeunload', ['$event'])
+  // beforeunloadHandler(event): boolean {
+  //   return false;
+  // }
 }

@@ -1,0 +1,10 @@
+<p>hooks works!</p>
+<button my-stroked-button (click)="changePrimitive()">Change primitive</button>
+<button my-stroked-button (click)="changeArr()">Change arr</button>
+<button my-stroked-button (click)="changeArrByMutation()">Change arr by mutation</button>
+<button my-stroked-button (click)="changeObj()">Change obj</button>
+<button my-stroked-button (click)="changeObjProp()">Change obj prop</button>
+
+<my-hooks-one [primitive]="primitive" [arr]="arr" [obj]="obj">
+  <span #parentContent>I'm content form parent component</span>
+</my-hooks-one>

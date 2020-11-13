@@ -23,6 +23,13 @@ const routes: Routes = [
     },
   },
   {
+    path: 'hooks',
+    loadChildren: () => import('./hooks/hooks.module').then((m) => m.HooksModule),
+    data: {
+      preload: false,
+    },
+  },
+  {
     path: 'demo',
     loadChildren: () => import('./demo/demo.module').then((m) => m.DemoModule),
     data: {
