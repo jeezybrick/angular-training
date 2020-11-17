@@ -1,1 +1,10 @@
-<p>grids works!</p>
+<div class="grid-container-one">
+  <div id="item-{{ index }}" class="grid-item" *ngFor="let item of arr; let index = index">{{ item }}</div>
+</div>
+
+<br /><br /><br />
+
+<div class="grid-container-two">
+  <div class="grid-item-one"></div>
+  <div class="grid-item-two"></div>
+</div>

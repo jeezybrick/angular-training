@@ -30,6 +30,13 @@ const routes: Routes = [
     },
   },
   {
+    path: 'grids',
+    loadChildren: () => import('./grids/grids.module').then((m) => m.GridsModule),
+    data: {
+      preload: false,
+    },
+  },
+  {
     path: 'demo',
     loadChildren: () => import('./demo/demo.module').then((m) => m.DemoModule),
     data: {

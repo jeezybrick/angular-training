@@ -47,7 +47,7 @@ $spacers: map-merge(
   $spacers
 );
 
-$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex, grid !default;
 $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky !default;
 

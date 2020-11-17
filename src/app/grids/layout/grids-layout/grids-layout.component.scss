@@ -1,0 +1,41 @@
+.grids-layout {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav article ads'
+    'footer footer footer';
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__article {
+    grid-area: article;
+  }
+
+  &__nav {
+    grid-area: nav;
+  }
+
+  &__ads {
+    grid-area: ads;
+    padding: 20px;
+    border: 1px solid gray;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}
+header,
+footer,
+article,
+nav {
+  padding: 20px;
+  border: 1px solid gray;
+}
