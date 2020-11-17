@@ -7,3 +7,11 @@
   padding: 0 10px;
   margin: 15px 0;
 }
+
+.icon-demo {
+  fill: red !important;
+
+  &:hover {
+    fill: blue !important;
+  }
+}

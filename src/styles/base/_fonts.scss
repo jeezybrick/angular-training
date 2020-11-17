@@ -14,13 +14,11 @@ $font-family: var(--font-family);
 }
 
 // Icons
-//@font-face {
-//  font-family: 'Glyphter';
-//  font-style: normal;
-//  font-weight: normal;
-//  src: url('~assets/fonts/Glyphter.eot');
-//  src: url('~assets/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
-//    url('~assets/fonts/Glyphter.woff') format('woff'),
-//    url('~assets/fonts/Glyphter.ttf') format('truetype'),
-//    url('~assets/fonts/Glyphter.svg#Glyphter') format('svg');
-//}
+@font-face {
+  font-family: 'Glyphter';
+  font-style: normal;
+  font-weight: normal;
+  src: url('~assets/fonts/Glyphter.eot');
+  src: url('~assets/fonts/Glyphter.eot?#iefix') format('embedded-opentype'), url('~assets/fonts/Glyphter.woff') format('woff'),
+    url('~assets/fonts/Glyphter.ttf') format('truetype'), url('~assets/fonts/Glyphter.svg#Glyphter') format('svg');
+}

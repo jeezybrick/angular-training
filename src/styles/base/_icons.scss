@@ -19,80 +19,21 @@
   &.secondary::before {
     color: var(--color-icon-secondary);
   }
-
 }
 
-.icon-arhive::before {content: '\0041';}
-.icon-back-1::before {content: '\0042';}
-.icon-back::before {content: '\0043';}
-.icon-bell-1::before {content: '\0044';}
-.icon-bookmark::before {content: '\0045';}
-.icon-calculator::before {content: '\0046';}
-.icon-calendar::before {content: '\0047';}
-.icon-camera::before {content: '\0048';}
-.icon-chech2::before {content: '\0049';}
-.icon-check2::before {content: '\004a';}
-.icon-clip-1::before {content: '\004b';}
-.icon-clip::before {content: '\004c';}
-.icon-close::before {content: '\004d';}
-.icon-coment::before {content: '\004e';}
-.icon-Delete::before {content: '\004f';}
-.icon-detail::before {content: '\0050';}
-.icon-display::before {content: '\0051';}
-.icon-dowhload::before {content: '\0052';}
-.icon-Download::before {content: '\0053';}
-.icon-edit::before {content: '\0054';}
-.icon-eye_close-1::before {content: '\0055';}
-.icon-eye_close::before {content: '\0056';}
-.icon-filter::before {content: '\0057';}
-.icon-gear::before {content: '\0058';}
-.icon-handshake::before {content: '\0059';}
-.icon-hard::before {content: '\005a';}
-.icon-hard2::before {content: '\0061';}
-.icon-headphones::before {content: '\0062';}
-.icon-help::before {content: '\0063';}
-.icon-home::before {content: '\0064';}
-.icon-info::before {content: '\0065';}
-.icon-link::before {content: '\0066';}
-.icon-loading::before {content: '\0067';}
-.icon-mail::before {content: '\0068';}
-.icon-Map-picker::before {content: '\0069';}
-.icon-Message::before {content: '\006a';}
-.icon-microphone-off::before {content: '\006b';}
-.icon-microphone::before {content: '\006c';}
-.icon-Mode::before {content: '\006d';}
-.icon-moon::before {content: '\006e';}
-.icon-next-1::before {content: '\006f';}
-.icon-next::before {content: '\0070';}
-.icon-Pause::before {content: '\0071';}
-.icon-Pause2::before {content: '\0072';}
-.icon-person::before {content: '\0073';}
-.icon-Play::before {content: '\0074';}
-.icon-plus-file::before {content: '\0075';}
-.icon-plus::before {content: '\0076';}
-.icon-post::before {content: '\0077';}
-.icon-restart::before {content: '\0078';}
-.icon-searh::before {content: '\0079';}
-.icon-size::before {content: '\007a';}
-.icon-size2::before {content: '\0030';}
-.icon-slider::before {content: '\0031';}
-.icon-smile::before {content: '\0032';}
-.icon-speakers::before {content: '\0033';}
-.icon-sun-1::before {content: '\0034';}
-.icon-sun::before {content: '\0035';}
-.icon-sunrise::before {content: '\0036';}
-.icon-table::before {content: '\0037';}
-.icon-users-1::before {content: '\0038';}
-.icon-users::before {content: '\0039';}
-.icon-video-off::before {content: '\0021';}
-.icon-video::before {content: '\0022';}
-.icon-volume down::before {content: '\0023';}
-.icon-volume-off::before {content: '\0024';}
-.icon-volume-on::before {content: '\0025';}
-.icon-wifi::before {content: '\0026';}
-.icon-chossed::before {content: '\0027';}
-.icon-back::before {content: '\0028';}
+.icon-ic-delete-forever:before {
+  content: '\0041';
+}
+.icon-close:before {
+  content: '\0044';
+}
+.icon-check-2:before {
+  content: '\0054';
+}
+.icon-user:before {
+  content: '\0066';
+}
 
 // Modifiers
-.icon-prev::before {content: '\0070'; transform: rotate(180deg);}
-.icon-arrow-down::before {content: '\0070'; transform: rotate(90deg);}
+//.icon-prev::before {content: '\0070'; transform: rotate(180deg);}
+//.icon-arrow-down::before {content: '\0070'; transform: rotate(90deg);}

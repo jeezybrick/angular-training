@@ -10,12 +10,12 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
 export const httpInterceptorProviders = [
   { provide: ErrorHandler, useClass: GlobalErrorHandler },
   { provide: API_URL, useValue: environment.apiUrl },
-  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: ApiUrlInterceptor,
-    multi: true,
-    deps: [API_URL],
-  },
+  // {
+  //   provide: HTTP_INTERCEPTORS,
+  //   useClass: ApiUrlInterceptor,
+  //   multi: true,
+  //   deps: [API_URL],
+  // },
   // {
   //   provide: HTTP_INTERCEPTORS,
   //   useClass: I18nInterceptor,
