@@ -27,10 +27,13 @@
   --color-text-heading: #{$black};
   --color-error-default: #{$pomegranate};
   --color-link-default: #{$black};
-  --color-button-default: #{$white};
+  --color-button-default: #{$black};
+  --color-button-disabled: rgba(0, 0, 0, 0.26);
   --color-button-stroked: #{$orange-1};
   --color-button-stroked-hover: #{$white};
   --color-button-stroked-disable: #{$orange-5};
+  --color-button-flat: #{$white};
+  --color-button-flat-disable: #{$white};
   --color-placeholder-input-default: #{$dove-gray};
   --color-icon-input-default: #{$dove-gray};
   --color-placeholder-input-disabled: #{$french-gray};
