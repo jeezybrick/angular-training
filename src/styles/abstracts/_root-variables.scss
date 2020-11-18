@@ -13,7 +13,7 @@
 
   --background-default: #{$titan-white};
 
-  --primary-default: #{$orange-1};
+  --primary-default: #{$orange-500};
   // --primary-default-hover: #{get-hover-color($purple-heart)};
   // --primary-default-active: #{get-active-color($purple-heart)};
   --secondary-default: #{$cerise};
@@ -29,11 +29,14 @@
   --color-link-default: #{$black};
   --color-button-default: #{$black};
   --color-button-disabled: rgba(0, 0, 0, 0.26);
-  --color-button-stroked: #{$orange-1};
+  --color-button-stroked: #{$orange-500};
   --color-button-stroked-hover: #{$white};
-  --color-button-stroked-disable: #{$orange-5};
-  --color-button-flat: #{$white};
-  --color-button-flat-disable: #{$white};
+  --color-button-stroked-disable: #{$orange-100};
+  --color-button-flat-primary: #{$white};
+  --color-button-flat-primary-disable: #{$white};
+  --color-button-flat-secondary: #{$teal-500};
+  --color-button-flat-secondary-hover: #{$white};
+  --color-button-flat-secondary-disable: #{$teal-200};
   --color-placeholder-input-default: #{$dove-gray};
   --color-icon-input-default: #{$dove-gray};
   --color-placeholder-input-disabled: #{$french-gray};
@@ -46,14 +49,17 @@
   --background-button-disabled: #{$french-gray};
   --background-color-input: #{$titan-white};
   --background-color-select-disabled: #{$magnolia};
-  --background-color-flat-button: #{$orange-1};
-  --background-color-flat-button-hover: #{$orange-3};
-  --background-color-flat-button-disable: #{$orange-5};
-  --background-color-stroked-button-hover: #{$orange-3};
+  --background-color-flat-primary-button: #{$orange-500};
+  --background-color-flat-primary-button-hover: #{$orange-300};
+  --background-color-flat-primary-button-disable: #{$orange-100};
+  --background-color-flat-secondary-button: #{$teal-100};
+  --background-color-flat-secondary-button-hover: #{$teal-500};
+  --background-color-flat-secondary-button-disable: #{$teal-100};
+  --background-color-stroked-button-hover: #{$orange-300};
 
   --border-radius-button: 40px;
-  --border-color-stroked-button: #{$orange-1};
-  --border-color-stroked-button-disable: #{$orange-5};
+  --border-color-stroked-button: #{$orange-500};
+  --border-color-stroked-button-disable: #{$orange-100};
 
   --shadow-card: 0 4rem 14px rgba(46, 43, 165, 0.1);
 

@@ -78,18 +78,34 @@ a.tg-button {
     }
   }
 
-  &.tg-flat-button {
-    background-color: var(--background-color-flat-button);
-    color: var(--color-button-flat);
+  &.tg-flat-primary-button {
+    background-color: var(--background-color-flat-primary-button);
+    color: var(--color-button-flat-primary);
 
     &:hover:not(:disabled):not(.disabled) {
-      background-color: var(--background-color-stroked-button-hover);
+      background-color: var(--background-color-flat-primary-button-hover);
     }
 
     &:disabled,
     &.disabled {
-      color: var(--color-button-flat-disable);
-      background-color: var(--background-color-flat-button-disable);
+      color: var(--color-button-flat-primary-disable);
+      background-color: var(--background-color-flat-primary-button-disable);
+    }
+  }
+
+  &.tg-flat-secondary-button {
+    background-color: var(--background-color-flat-secondary-button);
+    color: var(--color-button-flat-secondary);
+
+    &:hover:not(:disabled):not(.disabled) {
+      color: var(--color-button-flat-secondary-hover);
+      background-color: var(--background-color-flat-secondary-button-hover);
+    }
+
+    &:disabled,
+    &.disabled {
+      color: var(--color-button-flat-secondary-disable);
+      background-color: var(--background-color-flat-secondary-button-disable);
     }
   }
 }
