@@ -1,0 +1,58 @@
+@import 'variables';
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 54px;
+  --font-size-h2: 44px;
+  --font-size-h3: 34px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-weight-icon: 1.2;
+  --font-size-error-text: 10px;
+
+  --background-default: #{$titan-white};
+
+  --primary-default: #{$orange-1};
+  // --primary-default-hover: #{get-hover-color($purple-heart)};
+  // --primary-default-active: #{get-active-color($purple-heart)};
+  --secondary-default: #{$cerise};
+  // --secondary-default-hover: #{get-hover-color($cerise)};
+  // --secondary-default-active: #{get-active-color($cerise)};
+
+  --color-text-base: #{$cod-gray};
+  --color-text-primary: #{$purple-heart};
+  --color-text-secondary: #{$cerise};
+  --color-text-minor: #{$french-gray};
+  --color-text-heading: #{$black};
+  --color-error-default: #{$pomegranate};
+  --color-link-default: #{$black};
+  --color-button-default: #{$white};
+  --color-button-outline: #{$purple-heart};
+  --color-placeholder-input-default: #{$dove-gray};
+  --color-icon-input-default: #{$dove-gray};
+  --color-placeholder-input-disabled: #{$french-gray};
+  --color-icon-default: #{$black};
+  --color-icon-primary: #{$purple-heart};
+
+  --background-button-default: #{$purple-heart};
+  // --background-button-hover: #{get-hover-color($purple-heart)};
+  --background-button-outline-hover: #{$athens-gray};
+  --background-button-disabled: #{$french-gray};
+  --background-color-input: #{$titan-white};
+  --background-color-select-disabled: #{$magnolia};
+
+  --border-radius-button: 8px;
+
+  --shadow-card: 0 4rem 14px rgba(46, 43, 165, 0.1);
+
+  --width-sidenav: 260px;
+  --max-width-container: 1440px;
+  --padding-container: 0 15px;
+
+  --height-button: 34px;
+
+  --size-icon-default: 24px;
+
+  --z-index-backdrop-loader: 99;
+}
