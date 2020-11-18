@@ -10,6 +10,8 @@ import { MainLayoutModule } from '../shared/layout/main-layout/main-layout.modul
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ButtonDirectiveModule } from '../shared/directives/button/button.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [DemoComponent],
@@ -23,6 +25,8 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    ButtonDirectiveModule,
+    MatButtonModule,
   ],
 })
 export class DemoModule {}

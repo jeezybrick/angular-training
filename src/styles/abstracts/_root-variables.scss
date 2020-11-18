@@ -28,7 +28,9 @@
   --color-error-default: #{$pomegranate};
   --color-link-default: #{$black};
   --color-button-default: #{$white};
-  --color-button-outline: #{$purple-heart};
+  --color-button-stroked: #{$orange-1};
+  --color-button-stroked-hover: #{$white};
+  --color-button-stroked-disable: #{$orange-5};
   --color-placeholder-input-default: #{$dove-gray};
   --color-icon-input-default: #{$dove-gray};
   --color-placeholder-input-disabled: #{$french-gray};
@@ -41,8 +43,14 @@
   --background-button-disabled: #{$french-gray};
   --background-color-input: #{$titan-white};
   --background-color-select-disabled: #{$magnolia};
+  --background-color-flat-button: #{$orange-1};
+  --background-color-flat-button-hover: #{$orange-3};
+  --background-color-flat-button-disable: #{$orange-5};
+  --background-color-stroked-button-hover: #{$orange-3};
 
-  --border-radius-button: 8px;
+  --border-radius-button: 40px;
+  --border-color-stroked-button: #{$orange-1};
+  --border-color-stroked-button-disable: #{$orange-5};
 
   --shadow-card: 0 4rem 14px rgba(46, 43, 165, 0.1);
 
