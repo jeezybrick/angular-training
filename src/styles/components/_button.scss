@@ -33,8 +33,7 @@
   }
 }
 
-button.tg-button,
-a.tg-button {
+.tg-button {
   box-sizing: border-box;
   user-select: none;
   cursor: pointer;
@@ -60,52 +59,55 @@ a.tg-button {
     cursor: default;
     color: var(--color-button-disabled);
   }
+}
 
-  &.tg-stroked-button {
-    border: 1px solid var(--border-color-stroked-button);
-    color: var(--color-button-stroked);
+.tg-stroked-button {
+  @extend .tg-button;
+  border: 1px solid var(--border-color-stroked-button);
+  color: var(--color-button-stroked);
 
-    &:hover:not(:disabled):not(.disabled) {
-      border-color: var(--background-color-stroked-button-hover);
-      background-color: var(--background-color-stroked-button-hover);
-      color: var(--color-button-stroked-hover);
-    }
-
-    &:disabled,
-    &.disabled {
-      border-color: var(--border-color-stroked-button-disable);
-      color: var(--color-button-stroked-disable);
-    }
+  &:hover:not(:disabled):not(.disabled) {
+    border-color: var(--background-color-stroked-button-hover);
+    background-color: var(--background-color-stroked-button-hover);
+    color: var(--color-button-stroked-hover);
   }
 
-  &.tg-flat-primary-button {
-    background-color: var(--background-color-flat-primary-button);
-    color: var(--color-button-flat-primary);
+  &:disabled,
+  &.disabled {
+    border-color: var(--border-color-stroked-button-disable);
+    color: var(--color-button-stroked-disable);
+  }
+}
 
-    &:hover:not(:disabled):not(.disabled) {
-      background-color: var(--background-color-flat-primary-button-hover);
-    }
+.tg-flat-primary-button {
+  @extend .tg-button;
+  background-color: var(--background-color-flat-primary-button);
+  color: var(--color-button-flat-primary);
 
-    &:disabled,
-    &.disabled {
-      color: var(--color-button-flat-primary-disable);
-      background-color: var(--background-color-flat-primary-button-disable);
-    }
+  &:hover:not(:disabled):not(.disabled) {
+    background-color: var(--background-color-flat-primary-button-hover);
   }
 
-  &.tg-flat-secondary-button {
-    background-color: var(--background-color-flat-secondary-button);
-    color: var(--color-button-flat-secondary);
+  &:disabled,
+  &.disabled {
+    color: var(--color-button-flat-primary-disable);
+    background-color: var(--background-color-flat-primary-button-disable);
+  }
+}
 
-    &:hover:not(:disabled):not(.disabled) {
-      color: var(--color-button-flat-secondary-hover);
-      background-color: var(--background-color-flat-secondary-button-hover);
-    }
+.tg-flat-secondary-button {
+  @extend .tg-button;
+  background-color: var(--background-color-flat-secondary-button);
+  color: var(--color-button-flat-secondary);
 
-    &:disabled,
-    &.disabled {
-      color: var(--color-button-flat-secondary-disable);
-      background-color: var(--background-color-flat-secondary-button-disable);
-    }
+  &:hover:not(:disabled):not(.disabled) {
+    color: var(--color-button-flat-secondary-hover);
+    background-color: var(--background-color-flat-secondary-button-hover);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: var(--color-button-flat-secondary-disable);
+    background-color: var(--background-color-flat-secondary-button-disable);
   }
 }
